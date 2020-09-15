@@ -1,6 +1,6 @@
 {
   "name": "@betha-plataforma/kare",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Framework Design para Bootstrap 4",
   "main": "dist/kare.css",
   "files": [
