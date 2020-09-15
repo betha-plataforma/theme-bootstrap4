@@ -1,25 +1,17 @@
 {
   "name": "@betha-plataforma/kare",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Framework Design para Bootstrap 4",
-  "author": {
-    "name": "Plataforma Betha Sistemas",
-    "email": "ti.plataforma@betha.com.br",
-    "url": "http://www.betha.com.br/"
-  },
   "main": "dist/kare.css",
-  "license": "MIT",
-  "keywords": [
-    "kare",
-    "framework design",
-    "plataforma",
-    "betha sistemas"
-  ],
   "files": [
     "dist/"
   ],
   "engines": {
     "node": ">=12"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.26.10"
   },
   "scripts": {
     "start": "sass --watch src/kare.scss dist/kare.css",
@@ -27,8 +19,24 @@
     "build:compressed": "sass src/kare.scss:dist/kare.min.css --style=compressed",
     "build:expanded": "sass src/kare.scss:dist/kare.css --style=expanded"
   },
-  "devDependencies": {
-    "npm-run-all": "^4.1.5",
-    "sass": "^1.26.10"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betha-plataforma/kare.git"
+  },
+  "keywords": [
+    "kare",
+    "framework design",
+    "plataforma",
+    "betha sistemas"
+  ],
+  "author": {
+    "name": "Plataforma Betha Sistemas",
+    "email": "ti.plataforma@betha.com.br",
+    "url": "http://www.betha.com.br/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/betha-plataforma/kare/issues"
+  },
+  "homepage": "https://github.com/betha-plataforma/kare#readme"
 }
