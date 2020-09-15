@@ -1,0 +1,297 @@
+// Global
+@import '../../config';
+// stylelint-disable
+@function setopacity($color, $value) {
+  @return rgba(red($color), green($color), blue($color), $value);
+}
+
+button:focus {
+  outline: 1px dotted palette("gray", "dark-30");
+}
+
+.btn {
+  border: none;
+  border-radius: 2px;
+  font-family: $base-font;
+  font-weight: 400;
+  line-height: 1.475;
+  text-transform: uppercase;
+  > .material-icons {
+    vertical-align: middle;
+  }
+  i {
+    font-size: 14px;
+  }
+  &:before {
+    font-weight: normal;
+  }
+  &.btn-secondary {
+    background-color: palette('gray', 'light-40');
+    border: 1px solid palette('gray', 'base');
+    color: palette('gray', 'dark-30');
+    &:hover,
+    &:focus {
+      background-color: palette('gray', 'light-20');
+    }
+
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    &:active,
+    &.active {
+      background-color: palette('gray', 'light-10');
+      border: 1px solid palette('gray', 'base');
+      color: palette('gray', 'dark-30');
+    }
+    &[disabled],
+    &.disabled {
+      &:hover {
+        background-color: palette('gray', 'light-40');
+      }
+      border: 1px solid palette('gray', 'light-10');
+      box-shadow: none;
+      color: palette('gray', 'base');
+      opacity: 1;
+    }
+    &.dropdown-toggle {
+      border-left: 1px solid $gray;
+      z-index: 2;
+    }
+  }
+  &.btn-success {
+    background-color: palette('green', 'dark-10');
+    border: 1px solid palette('green', 'dark-10');
+    color: palette('gray', 'light-40');
+    &:hover,
+    &:focus {
+      background-color: palette('green', 'dark-20');
+      border: 1px solid palette('green', 'dark-20');
+    }
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    &:active,
+    &.active {
+      background-color: palette('green', 'dark-30');
+      border: 1px solid palette('green', 'dark-30');
+      color: palette('gray', 'light-40');
+    }
+    &[disabled],
+    &.disabled {
+      background-color: palette('green', 'light-20');
+      border: 1px solid palette('green', 'light-20');
+      box-shadow: none;
+      color: palette('gray', 'light-40');
+      opacity: 1;
+    }
+    &.dropdown-toggle {
+      border-left: 1px solid setopacity(palette('gray', 'light-40'), .4);
+      z-index: 2;
+    }
+  }
+  &.btn-primary {
+    background-color: palette('blue', 'base');
+    border: 1px solid palette('blue', 'base');
+    color: palette('gray', 'light-40');
+    &:hover,
+    &:focus {
+      background-color: palette('blue', 'dark-10');
+      border: 1px solid palette('blue', 'dark-10');
+    }
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    &:active,
+    &.active {
+      background-color: palette('blue', 'dark-20');
+      border: 1px solid palette('blue', 'dark-20');
+      color: palette('gray', 'light-40');
+    }
+    &[disabled],
+    &.disabled {
+      background-color: palette('blue', 'light-20');
+      border: 1px solid palette('blue', 'light-20');
+      box-shadow: none;
+      color: palette('gray', 'light-40');
+      opacity: 1;
+    }
+    &.dropdown-toggle {
+      border-left: 1px solid setopacity(palette('gray', 'light-40'), .4);
+      z-index: 2;
+    }
+  }
+  &.btn-danger {
+    background-color: palette('red', 'base');
+    border: 1px solid palette('red', 'base');
+    color: palette('gray', 'light-40');
+    &:hover,
+    &:focus {
+      background-color: palette('red', 'dark-10');
+      border: 1px solid palette('red', 'dark-10');
+    }
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    &:active,
+    &.active {
+      background-color: palette('red', 'dark-20');
+      border: 1px solid palette('red', 'dark-20');
+      color: palette('gray', 'light-40');
+    }
+    &[disabled],
+    &.disabled {
+      background-color: palette('red', 'light-20');
+      border: 1px solid palette('red', 'light-20');
+      box-shadow: none;
+      color: palette('gray', 'light-40');
+      opacity: 1;
+    }
+    &.dropdown-toggle {
+      border-left: 1px solid setopacity(palette('gray', 'light-40'), .4);
+      z-index: 2;
+    }
+  }
+  &.btn-warning {
+    background-color: palette('yellow', 'base');
+    border: 1px solid palette('yellow', 'base');
+    color: palette('gray', 'dark-30');
+    &:hover,
+    &:focus {
+      background-color: palette('yellow', 'dark-10');
+      border: 1px solid palette('yellow', 'dark-10');
+    }
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    &:active,
+    &.active {
+      background-color: palette('yellow', 'dark-20');
+      border: 1px solid palette('yellow', 'dark-20');
+      color: palette('gray', 'dark-30');
+    }
+    &[disabled],
+    &.disabled {
+      background-color: palette('yellow', 'light-10');
+      border: 1px solid palette('yellow', 'light-10');
+      box-shadow: none;
+      color: palette('gray', 'light-40');
+      opacity: 1;
+    }
+    &.dropdown-toggle {
+      border-left: 1px solid setopacity(palette('gray', 'light-40'), .4);
+      z-index: 2;
+    }
+  }
+  &.btn-info {
+    background-color: palette('aqua', 'light-10');
+    border: 1px solid palette('aqua', 'light-10');
+    color: palette('gray', 'dark-30');
+    &:hover,
+    &:focus {
+      background-color: palette('aqua', 'base');
+      border: 1px solid palette('aqua', 'base');
+    }
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    &:active,
+    &.active {
+      background-color: palette('aqua', 'dark-10');
+      border: 1px solid palette('aqua', 'dark-10');
+      color: palette('gray', 'light-40');
+    }
+    &[disabled],
+    &.disabled {
+      background-color: palette('aqua', 'light-20');
+      border: 1px solid palette('aqua', 'light-20');
+      box-shadow: none;
+      color: palette('gray', 'light-40');
+      opacity: 1;
+    }
+    &.dropdown-toggle {
+      border-left: 1px solid setopacity(palette('gray', 'light-40'), .4);
+      z-index: 2;
+    }
+  }
+  &.btn-link {
+    color: palette('gray', 'dark-20');
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      background-color: palette('gray', 'light-20');
+      color: palette('gray', 'dark-30');
+    }
+    &:active,
+    &.active {
+      background-color: palette('gray', 'light-10');
+      color: palette('gray', 'dark-30');
+    }
+    &[disabled],
+    &.disabled {
+      &:hover {
+        background-color: palette('gray', 'light-40');
+      }
+      color: palette('gray', 'base');
+      opacity: 1;
+    }
+  }
+  &.btn-add:before {
+    content: '\f0415';
+    display: inline-block;
+    font-family: $base-icon;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 5px;
+    margin-top: -3px;
+    padding-right: 0;
+    vertical-align: middle;
+  }
+  &.btn-lg {
+    &.btn-add:before {
+      font-size: 20px;
+    }
+  }
+  &.btn-xs {
+    font-size: 12px;
+    padding: 1px 5px;
+    &.btn-add:before {
+      font-size: 14px;
+    }
+  }
+  &.btn-sm {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  &.btn-circle {
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+    display: block;
+    font-size: 22px;
+    height: 50px;
+    width: 50px;
+    &:hover {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+    }
+  }
+}
+
+.btn-group-sm > .btn,
+.btn.btn-sm {
+  line-height: 1.55;
+}
+
+.btn-group {
+  .btn-info + .btn-info {
+    border-left: 1px solid setopacity(palette('gray', 'light-40'), .4);
+  }
+  .btn-warning + .btn-warning {
+    border-left: 1px solid setopacity(palette('gray', 'light-40'), .4);
+  }
+  .btn-danger + .btn-danger {
+    border-left: 1px solid setopacity(palette('gray', 'light-40'), .4);
+  }
+  .btn-primary + .btn-primary {
+    border-left: 1px solid setopacity(palette('gray', 'light-40'), .4);
+  }
+  .btn-success + .btn-success {
+    border-left: 1px solid setopacity(palette('gray', 'light-40'), .4);
+  }
+  .btn-default + .btn-default {
+    border-left: 1px solid palette('gray', 'base');
+  }
+}

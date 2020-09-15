@@ -1,0 +1,17 @@
+@import '../../variables';
+.popover {
+  border: 1px solid palette('gray', 'light-10');
+  border-radius: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
+  font-family: $base-font;
+  padding:0;
+  $dirs: 'bottom' 'left' 'top' 'right';
+  @each $dir in $dirs {
+    &.#{$dir} > .arrow {
+      border-#{$dir}-color: palette('gray', 'light-10');
+    }
+  }
+  &-content {
+    padding:12px;
+  }
+}

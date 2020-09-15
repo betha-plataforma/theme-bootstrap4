@@ -1,0 +1,120 @@
+// Global
+@import '../../variables';
+
+[type='radio'] {
+  left: -9999px;
+  position: absolute;
+
+  + label {
+    color: map-get($colors-gray, 'dark-30');
+    cursor: pointer;
+    font-family: $base-font;
+    font-size: 14px;
+    font-weight: 500;
+    height: 7.5px;
+    overflow-wrap: normal;
+    padding-left: 16px;
+    position: relative;
+    text-indent: 8px;
+    text-overflow: ellipsis;
+    user-select: none;
+    word-break: normal;
+
+    &:before,
+    &:after {
+
+      border-radius: 50%;
+      content: '';
+      left: 0;
+      position: absolute;
+      top: 2px;
+    }
+
+    &:before {
+      background: $white;
+      border: 2px solid map-get($colors-gray, 'base');
+      height: 15px;
+      width: 15px;
+    }
+
+    &:after {
+      background: no-repeat -100% -100%;
+      background-color: $link;
+      height: 7px;
+      left: 4px;
+      padding-right: 2px;
+      top: 6px;
+      width: 7px;
+    }
+  }
+
+  &:not(:checked) + label:after {
+    opacity: 0;
+  }
+
+  &:checked + label {
+    &:before {
+      border-color: $blue;
+    }
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &:disabled + label {
+    color: map-get($colors-gray, 'base');
+    &:before {
+      background-color: map-get($colors-gray, 'light-30');
+      border-color: map-get($colors-gray, 'light-10');
+      box-shadow: none;
+    }
+  }
+
+  &:disabled:checked + label {
+    &:after {
+      opacity: .65;
+    }
+  }
+
+
+  &.radio-success:checked + label {
+    &:before {
+      border-color: $green;
+    }
+    &:after {
+      background-color: $green;
+    }
+  }
+
+  &.radio-danger:checked + label {
+    &:before {
+      border-color: $red;
+    }
+    &:after {
+      background-color: $red;
+    }
+  }
+
+  &.radio-warning:checked + label {
+    &:before {
+      border-color: $yellow;
+    }
+    &:after {
+      background-color: $yellow;
+    }
+  }
+
+  &:focus + label:before {
+    outline: 5px auto focus-ring-color;
+  }
+}
+
+
+.form-check-inline .form-check-input {
+  display: none;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #3475c1;
+  background-color: #FFF;
+}

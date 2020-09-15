@@ -1,0 +1,192 @@
+// Global
+@import '../../variables';
+$dropdown-header-color: map-get($colors-gray, 'dark-10' );
+$dropdown-color:        map-get($colors-gray, 'dark-20' );
+
+.dropdown-menu {
+  border: 1px solid palette('gray', 'light-10');
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+  padding: 5px 0;
+  .dropdown-header {
+    color: palette('gray', 'dark-20');
+    font-size: 14px;
+    font-weight: font('primary', 'weight', 'semi-bold');
+    padding: 6px 14px;
+  }
+  .divider {
+    background-color: palette('gray', 'light-10');
+    margin: 10px 14px 0;
+  }
+  .dropdown-submenu {
+    position: relative;
+    & > .dropdown-menu {
+      margin-left: -1px;
+      margin-top: -6px;
+      top: 0;
+      &:not(.dropdown-menu-right) {
+        left: 100%;
+      }
+      &.dropdown-menu-right {
+        right: 100%;
+      }
+    }
+    & > a:after {
+      border-left-color: #CCC;
+      content: 'keyboard_arrow_left';
+      display: block;
+      float: left;
+      font-family: $base-icon;
+      height: 20px;
+      left: 22px;
+      margin-left: -15px;
+      margin-top: 0;
+      position: absolute;
+      top: 4px;
+      width: 14px;
+    }
+    &.dropdown-submenu-right {
+      & > a {
+        align-items: center;
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 10px;
+        grid-template-columns: auto 1fr auto;
+        width: 100%;
+        &:after {
+          border-left-color: #CCC;
+          content: 'keyboard_arrow_left';
+          display: block;
+          float: left;
+          font-family: $base-icon;
+          height: 20px;
+          left: auto;
+          margin-top: 0;
+          position: absolute;
+          right: 4px;
+          top: 4px;
+          transform: rotate(180deg);
+          width: 14px;
+        }
+      }
+    }
+  }
+  li {
+    > a,
+    > .dropdown-menu-checkbox,
+    &.dropdown-menu-checkbox,
+    > .sub-dropdown {
+      color: $dropdown-color;
+      padding: 6px 14px;
+      i {
+        // stylelint-disable-line
+        color: #555;
+      }
+    }
+    > a:not(.select2-search-choice-close):not(.color-btn) {
+      &:hover,
+      &:focus {
+        background-color: palette('gray', 'light-30');
+      }
+    }
+    > .btn-check {
+      padding-bottom: 6px;
+      padding-top: 6px;
+    }
+  }
+  > li {
+    &.disabled {
+      > a {
+        color: palette('gray') !important;
+      }
+    }
+  }
+  h2 {
+    color: #777;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4285;
+    margin: 0;
+    padding: 3px 20px;
+    white-space: nowrap;
+  }
+  ul.radio-list {
+    li {
+      // stylelint-disable-line
+      padding: 4px 20px 4px 30px;
+      &:hover {
+        background-color: #EDEDED;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      // stylelint-disable-line
+      position: relative;
+      white-space: nowrap;
+    }
+  }
+}
+
+.dropdown-sm {
+  width: 350px;
+}
+
+.dropdown-lg {
+  width: 650px;
+}
+
+.has-content {
+  padding-left: 8px;
+  padding-right: 8px;
+  > .input-group-search {
+    margin-bottom: 8px;
+    margin-top: 3px;
+  }
+}
+
+.no-result {
+  padding: 6px 14px;
+}
+
+.dropdown-right {
+  left: auto;
+  right: 0;
+}
+
+.dropdown-left {
+  left: 0;
+  right: auto;
+}
+
+.dropdown-menu > .disabled > a {
+  color: palette('gray');
+}
+
+// Retira o caret no dropdown do Bootstrap 4
+.dropdown-toggle,
+.dropup .dropdown-toggle {
+  &::after {
+    display: none;
+  }
+}
+
+.dropdown-item {
+  color: palette('gray', 'dark-30');
+  &:focus,
+  &:hover {
+    background-color: palette('gray', 'light-30');
+    border-color: palette('gray', 'light-30');
+    outline: none;
+    color: pallete('gray', 'dark-30');
+  }
+  &.active,
+  &:active {
+    color: #222;
+    background-color: #C0C0C0;
+  }
+}

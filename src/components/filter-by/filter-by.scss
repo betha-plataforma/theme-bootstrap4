@@ -1,0 +1,58 @@
+// Global
+@import '../../config';
+.filtrar-por {
+  background-color: palette('gray', 'light-20');
+  line-height: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0 15px 0 102px;
+  position: relative;
+  &:before {
+    color: palette('gray', 'dark-30');
+    content: 'Filtrar por';
+    font-size: 12px;
+    font-weight: 700;
+    left: 15px;
+    line-height: 32px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+  }
+  > li {
+    display: inline-block;
+    margin-right: 8px;
+    .btn-group {
+      display: block;
+    }
+    > a,
+    > div > a {
+      color: palette('gray', 'dark-20');
+      display: inline-block;
+      font-size: 13px;
+      line-height: 16px;
+      padding: 8px 4px;
+      position: relative;
+      text-decoration: none;
+      > .badge {
+        background-color: palette('white');
+        color: palette('gray', 'dark-30');
+        font-weight: 600;
+        padding: 2px 6px;
+        vertical-align: initial;
+      }
+      &:hover {
+        background-color: rgba(palette('black'), .05);
+      }
+      > i {
+        vertical-align: middle;
+      }
+    }
+    &.active {
+      > a,
+      > div > .dropdown-toggle {
+        background-color: rgba(palette('black'), .1);
+        color: palette('gray', 'dark-30');
+      }
+    }
+  }
+}

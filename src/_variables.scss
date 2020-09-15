@@ -1,0 +1,235 @@
+@import "./functions";
+@import "./mixins";
+// Variáveis
+// As variáveis devem seguir o seguinte padrão `$componente-estado-propriedade-tamanho`.
+// Ex.: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+$base-font: "Open Sans", "Arial", sans-serif;
+$base-icon: "Material Design Icons", "Arial", sans-serif;
+$assets-url: "https://cdn.betha.cloud/plataforma/design/kare/framework/0.1.4/assets/";
+$icon: (
+   "primary": (
+      "name": "Material Design Icons",
+   ),
+   "secondary": (
+      "name": "Material Design Icons",
+   ),
+);
+$font: (
+   "primary": (
+      "name": "Open Sans",
+      "weight": (
+         "light": 300,
+         "regular": 400,
+         "semi-bold": 600,
+         "bold": 700,
+         "extra-bold": 800,
+      ),
+   ),
+);
+// Colors
+$base-color: #f5f5f7;
+$white: #fff;
+$black: #000;
+// Colors >> Gray
+$gray-dark-40: $black;
+$gray-dark-30: #222;
+$gray-dark-20: #595959;
+$gray-dark-10: #767676;
+$gray: #c0c0c0;
+$gray-light-10: #e1e3e6;
+$gray-light-20: #ebedf0;
+$gray-light-30: #f5f7fa;
+$gray-light-40: $white;
+$colors-gray: (
+   "dark-40": $gray-dark-40,
+   "dark-30": $gray-dark-30,
+   "dark-20": $gray-dark-20,
+   "dark-10": $gray-dark-10,
+   "base": $gray,
+   "light-10": $gray-light-10,
+   "light-20": $gray-light-20,
+   "light-30": $gray-light-30,
+   "light-40": $gray-light-40,
+);
+// Colors >> Red
+$red: #d64038;
+$colors-red: (
+   "dark-40": dark($red, 40%),
+   "dark-30": dark($red, 30%),
+   "dark-20": dark($red, 20%),
+   "dark-10": dark($red, 10%),
+   "base": $red,
+   "light-10": light($red, 10%),
+   "light-20": light($red, 20%),
+   "light-30": light($red, 30%),
+   "light-40": light($red, 40%),
+);
+// Colors >> Pink
+$pink: #cb528e;
+$colors-pink: (
+   "dark-40": dark($pink, 40%),
+   "dark-30": dark($pink, 30%),
+   "dark-20": dark($pink, 20%),
+   "dark-10": dark($pink, 10%),
+   "base": $pink,
+   "light-10": light($pink, 10%),
+   "light-20": light($pink, 20%),
+   "light-30": light($pink, 30%),
+   "light-40": light($pink, 40%),
+);
+// Colors >> Blue
+$blue: #3475c1;
+$colors-blue: (
+   "dark-40": dark($blue, 40%),
+   "dark-30": dark($blue, 30%),
+   "dark-20": dark($blue, 20%),
+   "dark-10": dark($blue, 10%),
+   "base": $blue,
+   "light-10": light($blue, 10%),
+   "light-20": light($blue, 20%),
+   "light-30": light($blue, 30%),
+   "light-40": light($blue, 40%),
+);
+// Colors >> Aqua
+$aqua: #48b1d3;
+$colors-aqua: (
+   "dark-40": dark($aqua, 40%),
+   "dark-30": dark($aqua, 30%),
+   "dark-20": dark($aqua, 20%),
+   "dark-10": dark($aqua, 10%),
+   "base": $aqua,
+   "light-10": light($aqua, 10%),
+   "light-20": light($aqua, 20%),
+   "light-30": light($aqua, 30%),
+   "light-40": light($aqua, 40%),
+);
+// Colors >> Green
+$green: #54a668;
+$colors-green: (
+   "dark-40": dark($green, 40%),
+   "dark-30": dark($green, 30%),
+   "dark-20": dark($green, 20%),
+   "dark-10": dark($green, 10%),
+   "base": $green,
+   "light-10": light($green, 10%),
+   "light-20": light($green, 20%),
+   "light-30": light($green, 30%),
+   "light-40": light($green, 40%),
+);
+// Colors >> Yellow
+$yellow: #efbc3c;
+$colors-yellow: (
+   "dark-40": dark($yellow, 40%),
+   "dark-30": dark($yellow, 30%),
+   "dark-20": dark($yellow, 20%),
+   "dark-10": dark($yellow, 10%),
+   "base": $yellow,
+   "light-10": light($yellow, 10%),
+   "light-20": light($yellow, 20%),
+   "light-30": light($yellow, 30%),
+   "light-40": light($yellow, 40%),
+);
+// Colors >> Orange
+$orange: #ea863e;
+$colors-orange: (
+   "dark-40": dark($orange, 40%),
+   "dark-30": dark($orange, 30%),
+   "dark-20": dark($orange, 20%),
+   "dark-10": dark($orange, 10%),
+   "base": $orange,
+   "light-10": light($orange, 10%),
+   "light-20": light($orange, 20%),
+   "light-30": light($orange, 30%),
+   "light-40": light($orange, 40%),
+);
+// Colors >> Purple
+$purple: #a46ab5;
+$colors-purple: (
+   "dark-40": dark($purple, 40%),
+   "dark-30": dark($purple, 30%),
+   "dark-20": dark($purple, 20%),
+   "dark-10": dark($purple, 10%),
+   "base": $purple,
+   "light-10": light($purple, 10%),
+   "light-20": light($purple, 20%),
+   "light-30": light($purple, 30%),
+   "light-40": light($purple, 40%),
+);
+// Colors >> Todas
+$colors: (
+   "gray": $colors-gray,
+   "red": $colors-red,
+   "pink": $colors-pink,
+   "blue": $colors-blue,
+   "aqua": $colors-aqua,
+   "green": $colors-green,
+   "yellow": $colors-yellow,
+   "orange": $colors-orange,
+   "purple": $colors-purple,
+   "white": (
+      "base": $white,
+   ),
+   "black": (
+      "base": $black,
+   ),
+);
+
+/**
+ ** Cores dos produtos extraidos do manual da marca
+
+    Gestão municipal              -> Marrom   / Brown    -> #9A8B7D
+    Planejamento e Contabilidade  -> Lilás    / Lilac    -> #8986CA
+    Arrecadação e Fiscalização    -> Verde    / Lime     -> #26D07C
+    Atendimento                   -> Cinza    / Gray     -> #AFB2B2
+    Gestão de Compras e Contratos -> Vermelho / Red      -> #DF4661
+    Pessoal e Recursos Humanos    -> Azul     / Blue     -> #009CDE
+    Saúde e Assistência Social    -> Verde    / Green    -> #A2C084
+    Educação e Gestão Escolar     -> Amarelo  / Yellow   -> #F7B51C
+    Gestão e Leis Municipais      -> Laranja  / Orange   -> #F7932F
+
+ ** PS.: As Cores estão em português para coincidirem com o manual.
+ **/
+
+$main-brand-color: #001489;
+$brand-colors: (
+   "brown": #9a8b7d,
+   "lilac": #8986ca,
+   "lime": #26d07c,
+   "gray": #afb2b2,
+   "red": #df4661,
+   "blue": #009cde,
+   "green": #a2c084,
+   "yellow": #f7b51c,
+   "orange": #f7932f,
+);
+
+/**
+ ** Colors adicionais utilizadas no sistema
+ **/
+
+$additional-colors: (
+   "blue": #06a,
+   "petrol": #23313f,
+   "gold": #ad8b43,
+);
+$breadcrumb-text: map-get($colors-gray, "dark-10");
+$link-color: map-get($colors-blue, "base");
+$a-link: map-get($colors-blue, "dark-10");
+$link: $link-color;
+$switch-color: map-get($colors-gray, "dark-30");
+$switch-handle-color: map-get($colors-gray, "dark-10");
+$radio-button: map-get($colors-gray, "base");
+$shortcut: map-get($colors-gray, "base");
+$tag-background: map-get($colors-gray, "light-20");
+$tag-color: map-get($colors-gray, "dark-20");
+$badge-background: map-get($colors-gray, "light-20");
+// Timeline
+$dashed-line: map-get($colors-gray, "light-10");
+$dot-and-icons: map-get($colors-gray, "dark-20");
+$dot-active: map-get($colors-aqua, "base");
+$dot-desabled: map-get($colors-gray, "base");
+$text-timeline: map-get($colors-gray, "dark-30");
+$icon-danger-timeline: map-get($colors-red, "base");
+$icon-warning-timeline: map-get($colors-yellow, "base");
+
+// stylelint-enable

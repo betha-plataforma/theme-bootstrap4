@@ -1,0 +1,28 @@
+// Global
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
+span,
+div,
+label,
+td {
+  &.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &.preserve-white {
+    white-space: pre-wrap;
+  }
+  &.preserve-white.ellipsis {
+    white-space: pre;
+  }
+}
+
+@include make-colors('color', '.tx__');
+@include make-colors('background-color', '.bg__');
+
+.text-strike {
+  text-decoration: line-through;
+}

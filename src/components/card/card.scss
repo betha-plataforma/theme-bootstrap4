@@ -1,0 +1,17 @@
+// Global
+@import '../../config';
+// Local
+.card {
+  border: 1px solid palette('gray');
+  &.card-borderless {
+    border: none;
+  }
+  &.card-secondary {
+    background-color: palette('gray', 'light-30');
+    border: 1px solid palette('gray', 'light-30');
+  }
+
+  &.border-light {
+    border-color: #FFF !important;
+  }
+}

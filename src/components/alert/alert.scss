@@ -1,0 +1,123 @@
+// Global
+@import "../../config";
+
+$alert-warning: (
+  'background': palette('yellow', 'light-30'),
+  'border-color': palette('yellow', 'light-30'),
+  'color': palette('yellow', 'dark-30'),
+  'link-color': palette('yellow', 'dark-30'),
+  'icon-name': '\f0026'
+);
+
+$alert-danger: (
+  'background': palette('red', 'light-40'),
+  'border-color': palette('red', 'light-40'),
+  'color': palette('red', 'dark-10'),
+  'link-color': palette('red', 'dark-10'),
+  'icon-name': '\f0028'
+);
+
+$alert-success: (
+  'background': palette('green', 'light-40'),
+  'border-color': palette('green', 'light-40'),
+  'color': palette('green', 'dark-20'),
+  'link-color': palette('green', 'dark-20'),
+  'icon-name': '\f05e0'
+);
+
+$alert-info: (
+  'background': palette('aqua', 'light-30'),
+  'border-color': palette('aqua', 'light-30'),
+  'color': palette('aqua', 'dark-30'),
+  'link-color': palette('aqua', 'dark-30'),
+  'icon-name': '\f02fc'
+);
+
+$alert: (
+  'color': palette('gray', 'dark-30'),
+  'close-color': palette('gray', 'dark-10'),
+  'close-color-hover': palette('gray', 'dark-20')
+);
+
+$alert-states: (
+  'warning': $alert-warning,
+  'danger': $alert-danger,
+  'success': $alert-success,
+  'info': $alert-info
+);
+
+
+$root: ".alert";
+$rootIcon: ".alert-icon";
+$rootDismissible: ".alert-dismissible";
+
+#{$root} {
+  border-radius: 2px;
+  padding: 12px;
+  position: relative;
+
+  @each $name, $value in $alert-states {
+    &-#{$name} {
+      background-color: map-get($value, "background");
+      border: 1px solid map-get($value, "border-color");
+      color: map-get($value, "color");
+
+      .alert-link {
+        color: map-get($value, "link-color");
+      }
+    }
+  }
+
+  .alert-link {
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}
+
+.alert {
+  &#{$rootIcon} {
+    padding: 12px 12px 12px 48px;
+
+    &#{$root} {
+      @each $name, $value in $alert-states {
+        &-#{$name} {
+          &:before {
+            content: map-get($value, "icon-name");
+            display: inline-block;
+            font-family: $base-icon;
+            font-feature-settings: "liga" 1;
+            font-size: 20px;
+            font-style: normal;
+            height: 20px;
+            top: 15px;
+            left: 1.25rem;
+            line-height: 20px;
+            margin-right: 5px;
+            overflow: hidden;
+            position: absolute;
+            text-rendering: optimizeLegibility;
+            text-transform: none;
+            white-space: nowrap;
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+  &#{$rootDismissible} {
+    padding-right: 40px;
+
+    .close {
+      text-shadow: none;
+      padding: 10px 1.25rem 11px;
+    }
+
+    @each $name, $value in $alert-states {
+      &#{$root}-#{$name} {
+        .close {
+          color: map-get($value, "link-color");
+        }
+      }
+    }
+  }
+}

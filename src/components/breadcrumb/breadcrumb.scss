@@ -1,0 +1,20 @@
+// Global
+@import "../../variables";
+.breadcrumb {
+  background: 0 0;
+  margin: 0;
+  padding: 0;
+  .breadcrumb-item {
+    color: palette("gray", "dark-10");
+    font-size: 12px;
+    &.active {
+      color: palette("gray", "dark-30");
+    }
+    + :before {
+      color: palette("gray", "dark-10");
+      content: "\f0142";
+      font-family: $base-icon;
+      font-weight: 300;
+    }
+  }
+}

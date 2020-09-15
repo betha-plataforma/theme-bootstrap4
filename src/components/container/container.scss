@@ -1,0 +1,53 @@
+// Global
+@import '../../config';
+
+$root: '.container';
+
+.container {
+  &#{$root}-page {
+    background: palette('white');
+    border-radius: 2px;
+    box-sizing: border-box;
+    margin-top: 4px;
+    min-height: 500px;
+    padding: 4px 18px 15px;
+    position: relative;
+  }
+
+  //Fluido
+  &#{$root}-fluid {
+    width: calc(100% - 16px);
+  }
+
+  &#{$root}--full-y {
+    height: calc(100vh - 103px);
+    padding: 0;
+
+    &#{$root}-fluid {
+      width: calc(100% - 30px);
+    }
+
+    .row {
+      margin-left: -14px;
+      margin-right: -14px;
+    }
+
+    > .row {
+      height: 100%;
+
+      [class*='col-md-'] {
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    //Fluido
+    &#{$root}-fluid {
+      width: 100%;
+      /*rever*/
+    }
+  }
+}

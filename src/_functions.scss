@@ -1,0 +1,84 @@
+/*
+** @desc Seletor da font e suas propriedades
+** @param
+**  $prop: Propiedade
+**  $variation: Variação da propriedade
+**  $hierarchy: Hierarquia da font
+*/
+@function font($hierarchy: 'primary', $prop: 'name', $variation: 'regular') {
+  $hFont: map-get($font, $hierarchy);
+
+  @if $prop == 'weight' {
+    @return map-get(map-get($hFont , $prop), $variation);
+  }
+
+  @if map-has-key($hFont, $prop) {
+    @return map-get($hFont, $variation);
+  }
+
+  @return initial;
+
+}
+
+/*
+** @desc Seletor de cores baseado no padrão de nomenclatura estabelecido na paleta
+** @param
+**  $color: Nome da cor
+**  $variation: Variação da cor
+*/
+@function palette($color, $variation: 'base') {
+
+  @if map-has-key($colors, $color) {
+    @return map-get(map-get($colors , $color), $variation);
+  }
+
+  @else {
+    @warn 'Cor `#{$color}` indisponivel.'
+      + 'Por favor, verifique as cores na paleta.';
+  }
+
+}
+
+/*
+** @desc Divide uma string em um array com base em um separador
+** @param
+**  $string: String que será dividia
+**  $separator: String do separador
+*/
+
+@function str-split($string, $separator) {
+  $split-arr: ();
+  $index: str-index($string, $separator);
+  @while $index != null {
+    $item: str-slice($string, 1, $index - 1);
+    $split-arr: append($split-arr, $item);
+    $string: str-slice($string, $index + 1);
+    $index: str-index($string, $separator);
+  }
+
+  $split-arr: append($split-arr, $string);
+
+  @return $split-arr;
+}
+
+/*
+** @desc Acrescenta iluminação a cor
+** @param
+**  $color: Cor
+**  $amount: Porção de iluminação
+*/
+
+@function light($color, $amount){
+  @return hsl(hue($color), saturation($color), lightness($color) + $amount);
+}
+
+/*
+** @desc Remove iluminação a cor
+** @param
+**  $color: Cor
+**  $amount: Porção de iluminação
+*/
+
+@function dark($color, $amount){
+  @return hsl(hue($color), saturation($color), lightness($color) - $amount);
+}

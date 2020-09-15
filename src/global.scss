@@ -1,0 +1,84 @@
+@import "./components/fonts/fonts";
+@import "config";
+$background-color: palette("gray", "light-20");
+@media (max-width: 767px) {
+    html,
+    body {
+        background-color: palette("gray", "light-40") !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    html,
+    body {
+        background-color: palette("gray", "light-40") !important;
+    }
+}
+
+html,
+body {
+    background: $background-color;
+}
+
+body {
+    color: palette("gray", "dark-30");
+    font-family: $base-font;
+    font-size: 14px;
+}
+
+a {
+    color: palette("blue");
+    &.disabled {
+        color: palette("gray");
+        cursor: not-allowed;
+        &:hover {
+            color: palette("gray");
+            text-decoration: none;
+        }
+    }
+    &:focus {
+        text-decoration: underline;
+    }
+    &:hover {
+        color: palette("blue", "dark-10");
+    }
+}
+
+:focus {
+    outline: 1px dotted palette("gray", "dark-30");
+}
+
+label,
+a {
+  &.required {
+    position: relative;
+    &:before {
+      content: 'Este campo é obrigatório';
+      position: absolute;
+      display: none;
+      top: -26px;
+      right: -77px;
+      width: 155px;
+      background-color: #FFF;
+      border: 1px solid palette('gray', 'dark-10');
+      color: #222;
+      padding: 3px 6px;
+      font-weight: normal;
+      text-transform: none;
+      z-index: 1048;
+    }
+    &:after {
+      content: " *";
+      color: #D64038;
+    }
+    &:hover {
+      &:before {
+        display: block;
+      }
+    }
+  }
+}
+
+.text-muted {
+    color: #767676!important;
+}

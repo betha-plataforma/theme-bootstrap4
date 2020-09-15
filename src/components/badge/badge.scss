@@ -1,0 +1,67 @@
+// Global
+@import '../../variables';
+
+$badge-default: (
+  'background': map-get($colors-gray, 'light-20'),
+  'color': map-get($colors-gray, 'dark-20')
+);
+
+$badge-primary: (
+  'background': map-get($colors-blue, 'light-20'),
+  'color': map-get($colors-gray, 'light-40')
+);
+
+$badge-success: (
+  'background': map-get($colors-green, 'dark-10'),
+  'color': map-get($colors-gray, 'light-40')
+);
+
+$badge-danger: (
+  'background': map-get($colors-red, 'base'),
+  'color': map-get($colors-gray, 'light-40')
+);
+
+$badge-warning: (
+  'background': map-get($colors-yellow, 'base'),
+  'color': map-get($colors-gray, 'dark-30')
+);
+
+$badge-info: (
+  'background': map-get($colors-aqua, 'light-10'),
+  'color': map-get($colors-gray, 'dark-30')
+);
+
+.badge {
+  background-color:  palette('gray', 'light-10');
+  border-radius: 50px;
+  color: palette('gray', 'dark-30');
+  font-size: 12px;
+  font-weight: font('primary', 'weight', 'light');
+  padding: 3px 6px;
+  text-align: center;
+
+  &.badge-primary {
+    background-color: palette('blue');
+    color: palette('white');
+  }
+
+  &.badge-success {
+    background-color: palette('green', 'dark-10');
+    color: palette('white');
+  }
+
+  &.badge-danger {
+    background-color: palette('red');
+    color: palette('white');
+  }
+
+  &.badge-warning {
+    background-color: palette('yellow');
+    color: palette('gray', 'dark-30');
+  }
+
+  &.badge-info {
+    background-color: palette('aqua', 'light-10');
+    color: palette('gray', 'dark-30');
+  }
+}

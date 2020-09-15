@@ -1,0 +1,12 @@
+// Variáveis
+
+// As variáveis devem seguir o seguinte padrão `$componente-estado-propriedade-tamanho`.
+// Ex.: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+$timeline-dashed-line-color: map-get($colors-gray, 'light-10');
+$timeline-dot-and-icons-color: map-get($colors-gray, 'dark-20');
+$timeline-dot-active-color: map-get($colors-aqua, 'base');
+$timeline-dot-disabled-color: map-get($colors-gray, 'dark-10');
+$timeline-text-color: map-get($colors-gray, 'base');
+$timeline-icon-danger: map-get($colors-red, 'base');
+$timeline-icon-warning: map-get($colors-yellow, 'base');

@@ -1,0 +1,28 @@
+/*
+** @desc Gera variações de cores
+** @param
+**  $prop: Propriedade do css que receberá a cor
+**  $prefix: Classe que receberá as variações
+**
+*/
+@mixin make-colors($prop, $prefix, $posfix: '') {
+  @each $color-name, $color in $colors {
+    @each $color-variation, $value in $color {
+      @if $color-variation == 'base' {
+        #{$prefix + $color-name + $posfix} {
+          // !important necessário para sobreescrever cores pré definidas em elementos
+          #{$prop}: $value !important; // stylelint-disable-line declaration-no-important
+        }
+      }
+      @else {
+        $modif: str-split($color-variation, '-');
+        $lum: str-slice(nth($modif, 1), 0, 1);
+        $weight: nth($modif, 2);
+        #{$prefix + $color-name + '--' + $lum + $weight + $posfix} {
+          // !important necessário para sobreescrever cores pré definidas em elementos
+          #{$prop}: $value !important; // stylelint-disable-line declaration-no-important
+        }
+      }
+    }
+  }
+}

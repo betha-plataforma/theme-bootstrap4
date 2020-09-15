@@ -1,0 +1,20 @@
+@import '../../config';
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  height: 6px;
+  width: 6px;
+  &-track {
+    background: palette('gray', 'light-30');
+  }
+  &-corner {
+    background: $base-color;
+  }
+  &-thumb {
+    background-color: palette('gray');
+    border-radius: 1px;
+    &:hover {
+      background-color: rgba(palette('black'), .3);
+    }
+  }
+}

@@ -1,0 +1,108 @@
+// Global
+@import '../../variables';
+
+.form-check-input,
+.custom-checkbox .custom-control-input[type="checkbox"] {
+  left: -9999px;
+  position: absolute;
+
+  + label,
+  + .custom-control-label {
+    color: map-get($colors-gray, 'dark-30');
+    cursor: pointer;
+    font-family: $base-font;
+    font-size: 14px;
+    font-weight: 500;
+    height: 7px;
+    overflow-wrap: normal;
+    padding-left: 16px;
+    position: relative;
+    text-indent: 8px;
+    text-overflow: ellipsis;
+    user-select: none;
+    word-break: normal;
+    vertical-align: top;
+
+    &:before,
+    &:after {
+      border-radius: 2px;
+      height: 15px;
+      left: 0;
+      position: absolute;
+      top: 2px;
+      width: 15px;
+    }
+
+    &:before {
+      background: $white;
+      border: 2px solid map-get($colors-gray, 'base');
+      content: '';
+    }
+
+    &:after {
+      align-items: center;
+      background: no-repeat -100% -100%;
+      background-color: $blue;
+      color: $white;
+      content: '\f012c';
+      display: flex;
+      font-family: $base-icon;
+      font-size: 15px;
+      font-weight: 300;
+      justify-content: flex-end;
+      line-height: .8;
+    }
+  }
+
+  &:not(:checked) + label:after {
+    opacity: 0;
+  }
+
+  &:checked + label:after {
+    opacity: 1;
+  }
+
+  &:disabled + label {
+    color: map-get($colors-gray, 'base');
+    &:before {
+      background-color: map-get($colors-gray, 'light-30');
+      border-color: map-get($colors-gray, 'light-10');
+      box-shadow: none;
+    }
+  }
+  &:disabled:checked + label {
+    &:after {
+      opacity: .65;
+    }
+  }
+
+  &.checkbox-success + label:after {
+    background-color: $green;
+  }
+
+  &.checkbox-danger + label:after {
+    background-color: $red;
+  }
+
+  &.checkbox-warning + label:after {
+    background-color: $yellow;
+  }
+
+  &:focus + label:before {
+    outline: 5px auto focus-ring-color;
+  }
+
+  &:indeterminate + label:after {
+    border-bottom: 3px solid map-get($colors-gray, 'base');
+    content: '';
+    display: block;
+    height: 1px;
+    left: 5px;
+    top: 8px;
+    width: 7px;
+  }
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+}
