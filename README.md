@@ -16,6 +16,12 @@ npm install @betha-plataforma/kare
 yarn add @betha-plataforma/kare
 ```
 
+### CDN (unpkg)
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/@betha-plataforma/kare/dist/kare.min.css">
+```
+
 ## Configurando
 
 ```html
@@ -23,7 +29,7 @@ yarn add @betha-plataforma/kare
   <head>
     <!-- ... Bootstrap 4, Material Design Icons ... -->
     <!-- Framework Design -->
-    <link rel="stylesheet" href="kare.css">
+    <link rel="stylesheet" href="node_modules/@betha-plataforma/kare/dist/kare.min.css">
   </head>
   <body>
     <!-- ...  -->
