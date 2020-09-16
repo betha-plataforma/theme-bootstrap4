@@ -1,6 +1,6 @@
 {
   "name": "@betha-plataforma/kare",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Framework Design para Bootstrap 4",
   "main": "dist/kare.css",
   "files": [
@@ -27,12 +27,12 @@
     "kare",
     "framework design",
     "plataforma",
-    "betha sistemas"
+    "betha cloud"
   ],
   "author": {
-    "name": "Plataforma Betha Sistemas",
+    "name": "Plataforma Betha Cloud",
     "email": "ti.plataforma@betha.com.br",
-    "url": "http://www.betha.com.br/"
+    "url": "https://plataforma.betha.cloud/"
   },
   "license": "MIT",
   "bugs": {
