@@ -37,6 +37,10 @@ yarn add @betha-plataforma/kare
 </html>
 ```
 
+## Exemplos
+
+Exemplos podem ser encontrados em [betha-plataforma/exemplos](https://github.com/betha-plataforma/exemplos)
+
 ## Componentes
 
 Os componentes suportados (com base na especificação do Design System), são:
