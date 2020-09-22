@@ -19,7 +19,7 @@ yarn add @betha-plataforma/kare
 ### CDN (unpkg)
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@betha-plataforma/kare/dist/kare.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@betha-plataforma/kare">
 ```
 
 ## Configurando
@@ -27,13 +27,14 @@ yarn add @betha-plataforma/kare
 ```html
 <html>
   <head>
-    <!-- ... Bootstrap 4, Material Design Icons ... -->
+    <!-- Bootstrap 4 e Material Design Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@mdi/font@5.0.45/css/materialdesignicons.min.css">
+
     <!-- Framework Design -->
-    <link rel="stylesheet" href="node_modules/@betha-plataforma/kare/dist/kare.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@betha-plataforma/kare">
   </head>
-  <body>
-    <!-- ...  -->
-  </body>
+  <!-- ... -->
 </html>
 ```
 
