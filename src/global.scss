@@ -26,8 +26,11 @@ body {
     font-size: 14px;
 }
 
-a {
+a,
+a:not([href]),
+a:not([href]):not([class]) {
     color: palette("blue");
+    cursor: pointer;
     &.disabled {
         color: palette("gray");
         cursor: not-allowed;
