@@ -44,7 +44,7 @@ Exemplos podem ser encontrados em [betha-plataforma/exemplos](https://github.com
 
 ## Componentes
 
-Os componentes suportados (com base na especificação do Design System), são:
+Os componentes suportados, com base na especificação do Design System, são:
 
 * Abas
 * Alerta
