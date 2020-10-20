@@ -1,17 +1,13 @@
 // Global
 @import '../../config';
-// Local
+
 .card {
-  border: 1px solid palette('gray');
-  &.card-borderless {
-    border: none;
-  }
-  &.card-secondary {
-    background-color: palette('gray', 'light-30');
-    border: 1px solid palette('gray', 'light-30');
+  &.bg-secondary {
+    background-color: palette('gray', 'light-30') !important;
   }
 
-  &.border-light {
-    border-color: #FFF !important;
+  &.border-secondary {
+    border: 1px solid palette('gray') !important;
   }
+
 }
