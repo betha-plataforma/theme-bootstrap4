@@ -1,103 +1,42 @@
 // Global
-@import '../../variables';
-$dropdown-header-color: map-get($colors-gray, 'dark-10' );
-$dropdown-color:        map-get($colors-gray, 'dark-20' );
+@import "../../variables";
+$dropdown-header-color: map-get($colors-gray, "dark-10");
+$dropdown-color: map-get($colors-gray, "dark-20");
 
 .dropdown-menu {
-  border: 1px solid palette('gray', 'light-10');
+  border: 1px solid palette("gray", "light-10");
   border-radius: 2px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   padding: 5px 0;
   .dropdown-header {
-    color: palette('gray', 'dark-20');
+    color: palette("gray", "dark-20");
     font-size: 14px;
-    font-weight: font('primary', 'weight', 'semi-bold');
+    font-weight: font("primary", "weight", "semi-bold");
     padding: 6px 14px;
   }
   .divider {
-    background-color: palette('gray', 'light-10');
+    background-color: palette("gray", "light-10");
     margin: 10px 14px 0;
   }
-  .dropdown-submenu {
-    position: relative;
-    & > .dropdown-menu {
-      margin-left: -1px;
-      margin-top: -6px;
-      top: 0;
-      &:not(.dropdown-menu-right) {
-        left: 100%;
-      }
-      &.dropdown-menu-right {
-        right: 100%;
-      }
-    }
-    & > a:after {
-      border-left-color: #CCC;
-      content: 'keyboard_arrow_left';
-      display: block;
-      float: left;
-      font-family: $base-icon;
-      height: 20px;
-      left: 22px;
-      margin-left: -15px;
-      margin-top: 0;
-      position: absolute;
-      top: 4px;
-      width: 14px;
-    }
-    &.dropdown-submenu-right {
-      & > a {
-        align-items: center;
-        display: grid;
-        grid-auto-flow: column;
-        grid-gap: 10px;
-        grid-template-columns: auto 1fr auto;
-        width: 100%;
-        &:after {
-          border-left-color: #CCC;
-          content: 'keyboard_arrow_left';
-          display: block;
-          float: left;
-          font-family: $base-icon;
-          height: 20px;
-          left: auto;
-          margin-top: 0;
-          position: absolute;
-          right: 4px;
-          top: 4px;
-          transform: rotate(180deg);
-          width: 14px;
-        }
-      }
-    }
-  }
   li {
-    > a,
-    > .dropdown-menu-checkbox,
-    &.dropdown-menu-checkbox,
-    > .sub-dropdown {
+    > a {
       color: $dropdown-color;
       padding: 6px 14px;
       i {
-        // stylelint-disable-line
         color: #555;
       }
     }
-    > a:not(.select2-search-choice-close):not(.color-btn) {
+    > a {
       &:hover,
       &:focus {
-        background-color: palette('gray', 'light-30');
+        background-color: palette("gray", "light-30");
       }
-    }
-    > .btn-check {
-      padding-bottom: 6px;
-      padding-top: 6px;
     }
   }
   > li {
     &.disabled {
       > a {
-        color: palette('gray') !important;
+        color: palette("gray") !important;
       }
     }
   }
@@ -116,7 +55,7 @@ $dropdown-color:        map-get($colors-gray, 'dark-20' );
       // stylelint-disable-line
       padding: 4px 20px 4px 30px;
       &:hover {
-        background-color: #EDEDED;
+        background-color: #ededed;
       }
     }
   }
@@ -164,10 +103,10 @@ $dropdown-color:        map-get($colors-gray, 'dark-20' );
 }
 
 .dropdown-menu > .disabled > a {
-  color: palette('gray');
+  color: palette("gray");
 }
 
-// Retira o caret no dropdown do Bootstrap 4
+// Retira o caret no dropdown no Bootstrap 4
 .dropdown-toggle,
 .dropup .dropdown-toggle {
   &::after {
@@ -176,17 +115,37 @@ $dropdown-color:        map-get($colors-gray, 'dark-20' );
 }
 
 .dropdown-item {
-  color: palette('gray', 'dark-30');
+  color: palette("gray", "dark-30");
   &:focus,
   &:hover {
-    background-color: palette('gray', 'light-30');
-    border-color: palette('gray', 'light-30');
+    background-color: palette("gray", "light-30");
+    border-color: palette("gray", "light-30");
     outline: none;
-    color: pallete('gray', 'dark-30');
+    color: pallete("gray", "dark-30");
   }
   &.active,
   &:active {
     color: #222;
-    background-color: #C0C0C0;
+    background-color: #c0c0c0;
+  }
+}
+
+.btn.btn-secondary.dropdown-toggle,
+.show > .btn-secondary.dropdown-toggle {
+  background-color: palette("gray", "light-40");
+  border: 1px solid palette("gray", "base");
+  color: palette("gray", "dark-30");
+
+  &:focus {
+    background-color: palette("gray", "light-20");
+  }
+
+  &:not(:disabled):not(.disabled).active,
+  &:not(:disabled):not(.disabled):active,
+  &:active,
+  &.active {
+    background-color: palette("gray", "light-10");
+    border: 1px solid palette("gray", "base");
+    color: palette("gray", "dark-30");
   }
 }
