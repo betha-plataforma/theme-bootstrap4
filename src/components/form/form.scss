@@ -51,12 +51,14 @@ form {
       border-color: palette('red');
     }
   }
-  label {
-    color: palette('gray', 'dark-20');
-    font-size: 12px;
-    font-weight: 600;
-    margin-bottom: 2px;
-  }
+}
+
+label,
+form label {
+  color: palette('gray', 'dark-20');
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 2px;
 }
 
 .required-icon {
