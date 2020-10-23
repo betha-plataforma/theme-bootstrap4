@@ -1,6 +1,6 @@
 @import '../../config';
 $font-name: 'Open Sans' !default;
-$font-path: $assets-url + 'fonts/woff2' !default;
+$font-path: $assets-url + 'fonts/woff2/' !default;
 
 @font-face {
   font-family: $font-name;
