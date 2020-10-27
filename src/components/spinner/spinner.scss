@@ -1,0 +1,105 @@
+@import "../../config";
+
+$color: palette("blue");
+$bLeft: 99952px;
+$left: 99973px;
+$aLeft: 99995px;
+$size: 20px;
+.spinner-grow {
+    display: inline-block;
+    position: relative;
+    left: -99999px;
+    width: $size;
+    height: $size;
+    margin-left: 52px;
+    border-radius: 10px;
+    background-color: $color;
+    color: palette("blue");
+    box-shadow: $left 0 0 -5px $color;
+    animation: grow 1.6s infinite ease-in-out;
+    animation-delay: 0.25s;
+    vertical-align: middle;
+    text-align: initial;
+    opacity: 1;
+    &::before,
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        width: $size;
+        height: $size;
+        border-radius: 10px;
+        background-color: $color;
+        color: $color;
+    }
+
+    &::before {
+        box-shadow: $bLeft 0 0 -5px $color;
+        animation: growBefore 1.6s infinite ease-in-out;
+        animation-delay: 0s;
+    }
+
+    &::after {
+        box-shadow: $aLeft 0 0 -5px $color;
+        animation: growAfter 1.6s infinite ease-in-out;
+        animation-delay: 0.5s;
+    }
+
+    &.spinner-grow-sm {
+        zoom: 0.5;
+    }
+}
+
+.spinner-grow-backdrop {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1060;
+    pointer-events: none;
+}
+
+@keyframes growBefore {
+    0% {
+        box-shadow: $bLeft 0 0 -5px $color;
+    }
+    30% {
+        box-shadow: $bLeft 0 0 2px $color;
+    }
+    60%,
+    100% {
+        box-shadow: $bLeft 0 0 -5px $color;
+    }
+}
+
+@keyframes grow {
+    0% {
+        box-shadow: $left 0 0 -5px $color;
+    }
+    30% {
+        box-shadow: $left 0 0 2px $color;
+    }
+    60%,
+    100% {
+        box-shadow: $left 0 0 -5px $color;
+    }
+}
+
+@keyframes growAfter {
+    0% {
+        box-shadow: $aLeft 0 0 -5px $color;
+    }
+    30% {
+        box-shadow: $aLeft 0 0 2px $color;
+    }
+    60%,
+    100% {
+        box-shadow: $aLeft 0 0 -5px $color;
+    }
+}
