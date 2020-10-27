@@ -7,7 +7,7 @@
   position: absolute;
 
   + label,
-  + .custom-control-label {
+  + label.form-check-label {
     color: map-get($colors-gray, 'dark-30');
     cursor: pointer;
     font-family: $base-font;

@@ -55,7 +55,8 @@ form {
 
 label,
 form label {
-  &:not(.custom-control-label) {
+  &:not(.custom-control-label),
+  &:not(.form-check-label) {
     color: palette("gray", "dark-20");
     font-size: 12px;
     font-weight: 600;
