@@ -58,6 +58,7 @@ Os componentes suportados, com base na especificação do Design System, são:
 * Input
 * Link
 * Listagem
+* Loader
 * Modal
 * Paginação
 * Popover
