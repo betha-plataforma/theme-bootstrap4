@@ -1,16 +1,16 @@
 // Global
-@import '../../config';
+@import "../../config";
 // Local
-$label: map-get($colors-gray, 'dark-30');
-$input-border: map-get($colors-gray, 'base');
-$input-text:  map-get($colors-gray, 'dark-20');
-$input-addon-hover:  map-get($colors-gray, 'light-20');
+$label: map-get($colors-gray, "dark-30");
+$input-border: map-get($colors-gray, "base");
+$input-text: map-get($colors-gray, "dark-20");
+$input-addon-hover: map-get($colors-gray, "light-20");
 
 .form-control {
-  border: 1px solid palette('gray');
+  border: 1px solid palette("gray");
   border-radius: 2px;
   box-shadow: none;
-  color: palette('gray', 'dark-30');
+  color: palette("gray", "dark-30");
   font-size: 13px;
   transition: none;
   &.input-sm {
@@ -20,26 +20,26 @@ $input-addon-hover:  map-get($colors-gray, 'light-20');
     font-size: 18px;
   }
   &::placeholder {
-    color: palette('gray', 'dark-10');
+    color: palette("gray", "dark-10");
   }
   &:focus {
-    border-color: palette('blue');
+    border-color: palette("blue");
     box-shadow: none;
     outline: none;
   }
   &.input-danger:focus {
-    border-color: palette('red');
+    border-color: palette("red");
   }
   &.input-success:focus {
-    border-color: palette('green');
+    border-color: palette("green");
   }
   &[readonly] {
-    background-color: palette('gray', 'light-20');
+    background-color: palette("gray", "light-20");
   }
   &[disabled] {
-    background-color: palette('gray', 'light-20');
-    border-color: palette('gray');
-    color: palette('gray', 'dark-10');
+    background-color: palette("gray", "light-20");
+    border-color: palette("gray");
+    color: palette("gray", "dark-10");
   }
 }
 
@@ -48,11 +48,16 @@ form {
     .field-error,
     .field-error .select2-choice,
     .field-error .select2-choices {
-      border-color: palette('red');
+      border-color: palette("red");
     }
   }
-  label {
-    color: palette('gray', 'dark-20');
+}
+
+label,
+form label {
+  &:not(.custom-control-label),
+  &:not(.form-check-label) {
+    color: palette("gray", "dark-20");
     font-size: 12px;
     font-weight: 600;
     margin-bottom: 2px;
@@ -60,8 +65,8 @@ form {
 }
 
 .required-icon {
-  color: palette('red');
-  font-family: 'Arial', sans-serif;
+  color: palette("red");
+  font-family: "Arial", sans-serif;
 }
 
 .tabrequired {
@@ -73,21 +78,21 @@ form {
 
 input[disabled] {
   + .input-group-addon {
-    border-right: 1px solid palette('gray');
+    border-right: 1px solid palette("gray");
   }
 }
 
 .input-group-text {
-  padding: 0 .75rem;
+  padding: 0 0.75rem;
 }
 
 .input-group-addon {
-  background-color: palette('gray', 'light-20');
-  border-color: palette('gray');
+  background-color: palette("gray", "light-20");
+  border-color: palette("gray");
   border-radius: 2px;
-  color: palette('gray', 'dark-20');
+  color: palette("gray", "dark-20");
   + input[disabled] {
-    border-left: 1px solid palette('gray');
+    border-left: 1px solid palette("gray");
   }
 }
 
@@ -131,34 +136,34 @@ input[disabled] {
 
 .has-error {
   .form-control:focus {
-    border-color: palette('red');
+    border-color: palette("red");
   }
   .input-group-addon {
-    background-color: palette('red', 'light-40');
-    color: palette('red', 'dark-10');
+    background-color: palette("red", "light-40");
+    color: palette("red", "dark-10");
   }
 }
 
 .has-success {
   .form-control:focus {
-    border-color: palette('green');
+    border-color: palette("green");
   }
   .input-group-addon {
-    background-color: palette('green', 'light-40');
-    color: palette('green', 'dark-20');
+    background-color: palette("green", "light-40");
+    color: palette("green", "dark-20");
   }
 }
 
 .has-warning {
   .form-control:focus {
-    border-color: palette('yellow', 'dark-20');
+    border-color: palette("yellow", "dark-20");
   }
   .input-group-addon {
-    background-color: palette('yellow', 'light-30');
-    color: palette('yellow', 'dark-30');
+    background-color: palette("yellow", "light-30");
+    color: palette("yellow", "dark-30");
   }
   .form-control-feedback {
-    color: palette('yellow', 'dark-10');
+    color: palette("yellow", "dark-10");
   }
 }
 

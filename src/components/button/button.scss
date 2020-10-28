@@ -295,3 +295,8 @@ button:focus {
     border-left: 1px solid palette('gray', 'base');
   }
 }
+
+// Permite o uso do title em botão com a classe btn-link que estiver desabilitado
+button.btn-link:disabled {
+  pointer-events: all;
+}

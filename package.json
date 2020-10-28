@@ -1,9 +1,9 @@
 {
-  "name": "@betha-plataforma/kare",
-  "version": "0.0.5",
-  "description": "Framework Design para Bootstrap 4",
-  "main": "dist/kare.css",
-  "unpkg": "dist/kare.min.css",
+  "name": "@betha-plataforma/theme-bootstrap4",
+  "version": "1.0.0",
+  "description": "Tema do Design System Betha para Bootstrap 4",
+  "main": "dist/theme-bootstrap4.css",
+  "unpkg": "dist/theme-bootstrap4.min.css",
   "files": [
     "dist/"
   ],
@@ -15,18 +15,18 @@
     "sass": "^1.26.10"
   },
   "scripts": {
-    "start": "sass --watch src/kare.scss dist/kare.css",
+    "start": "sass --watch src/all.scss dist/theme-bootstrap4.css",
     "build": "run-s build:*",
-    "build:compressed": "sass src/kare.scss:dist/kare.min.css --style=compressed",
-    "build:expanded": "sass src/kare.scss:dist/kare.css --style=expanded"
+    "build:compressed": "sass src/all.scss:dist/theme-bootstrap4.min.css --style=compressed",
+    "build:expanded": "sass src/all.scss:dist/theme-bootstrap4.css --style=expanded"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/betha-plataforma/kare.git"
+    "url": "git+https://github.com/betha-plataforma/theme-bootstrap4.git"
   },
   "keywords": [
-    "kare",
-    "framework design",
+    "bootstrap theme",
+    "design system betha",
     "plataforma",
     "betha cloud"
   ],
@@ -37,7 +37,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/betha-plataforma/kare/issues"
+    "url": "https://github.com/betha-plataforma/theme-bootstrap4/issues"
   },
-  "homepage": "https://github.com/betha-plataforma/kare#readme"
+  "homepage": "https://github.com/betha-plataforma/theme-bootstrap4#readme"
 }

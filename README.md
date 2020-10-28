@@ -1,25 +1,25 @@
-# @betha-plataforma/kare
+# @betha-plataforma/theme-bootstrap4
 
-Framework Design para Bootstrap 4 conforme [Design System da Betha Sistemas](https://design.plataforma.betha.cloud/)
+Tema do [Design System Betha](https://design.plataforma.betha.cloud/) para [Bootstrap 4](https://getbootstrap.com/docs/4.5/)
 
 ## Instalando
 
 ### NPM
 
 ```shell
-npm install @betha-plataforma/kare
+npm install @betha-plataforma/theme-bootstrap4
 ```
 
 ### Yarn
 
 ```shell
-yarn add @betha-plataforma/kare
+yarn add @betha-plataforma/theme-bootstrap4
 ```
 
 ### CDN (unpkg)
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@betha-plataforma/kare">
+<link rel="stylesheet" href="https://unpkg.com/@betha-plataforma/theme-bootstrap4">
 ```
 
 ## Configurando
@@ -32,7 +32,7 @@ yarn add @betha-plataforma/kare
     <link rel="stylesheet" href="https://unpkg.com/@mdi/font@5.0.45/css/materialdesignicons.min.css">
 
     <!-- Framework Design -->
-    <link rel="stylesheet" href="https://unpkg.com/@betha-plataforma/kare">
+    <link rel="stylesheet" href="https://unpkg.com/@betha-plataforma/theme-bootstrap4">
   </head>
   <!-- ... -->
 </html>
@@ -44,7 +44,7 @@ Exemplos podem ser encontrados em [betha-plataforma/exemplos](https://github.com
 
 ## Componentes
 
-Os componentes suportados (com base na especificação do Design System), são:
+Os componentes suportados, com base na especificação do Design System, são:
 
 * Abas
 * Alerta
@@ -58,6 +58,7 @@ Os componentes suportados (com base na especificação do Design System), são:
 * Input
 * Link
 * Listagem
+* Loader
 * Modal
 * Paginação
 * Popover

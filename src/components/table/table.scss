@@ -34,7 +34,7 @@ $root: ".table";
 // Estilo principal
 #{$root} {
   background-color: transparent;
-  border: 1px solid palette("gray", "light-10");
+  // border: 1px solid palette("gray", "light-10");
   -ms-hyphens: auto;
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
@@ -180,7 +180,7 @@ $root: ".table";
       > td,
       > th {
         background-clip: padding-box !important;
-        border: 1px solid palette("gray", "light-10");
+        // border: 1px solid palette("gray", "light-10");
         line-height: 1.4286;
         padding: 6px;
 
@@ -999,7 +999,7 @@ $root: ".table";
   thead {
     tr {
       th {
-        border: 0;
+        border: 1px solid palette("gray", "light-10");
       }
     }
   }
@@ -1007,8 +1007,8 @@ $root: ".table";
   tbody {
     tr {
       td {
-        border-left: 0;
-        border-right: 0;
+        border-left: 1px solid palette("gray", "light-10");
+        border-right: 1px solid palette("gray", "light-10");
       }
     }
   }

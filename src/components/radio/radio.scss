@@ -5,7 +5,8 @@
   left: -9999px;
   position: absolute;
 
-  + label {
+  + label,
+  + label.form-check-label {
     color: map-get($colors-gray, 'dark-30');
     cursor: pointer;
     font-family: $base-font;
