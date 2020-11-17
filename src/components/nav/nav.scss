@@ -471,3 +471,47 @@ nav.nav {
     }
   }
 }
+
+
+// Timeline
+.nav.flex-column.nav-tabs {
+  &.nav-timeline {
+    border: none;
+    li {
+      display: flex;
+      .badge {
+        z-index: 2;
+        margin-left: 108px;
+        transform: translateX(-50%);
+      }
+      > div {
+        min-width: 108px;
+        flex: 0;
+        text-align: right;
+        padding-right: 12px;
+        border-right: 1px solid #c0c0c0;
+        margin-right: 12px;
+        p {
+          margin: 20px 0 8px;
+        }
+        small {
+          position: relative;
+          color: #767676;
+          font-size: 12px;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 1px;
+            right: -20px;
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            border: 1px solid #c0c0c0;
+            border-radius: 50%;
+            z-index: 12;
+          }
+        }
+      }
+    }
+  }
+}
