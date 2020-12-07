@@ -32,6 +32,8 @@ $badge-info: (
 );
 
 .badge {
+  display: inline-flex;
+  align-items: center;
   background-color:  palette('gray', 'light-10');
   border-radius: 50px;
   color: palette('gray', 'dark-30');

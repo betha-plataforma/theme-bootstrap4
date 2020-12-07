@@ -19,14 +19,14 @@ $font-path: $assets-url + 'fonts/' !default;
 @font-face {
   font-family: $font-name;
   src: local('Open Sans Bold'), local('OpenSans-Bold'), url('#{$font-path}OpenSans-Bold.woff2') format('woff2');
-  font-weight: 700;
+  font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: $font-name;
   src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url('#{$font-path}OpenSans-BoldItalic.woff2') format('woff2');
-  font-weight: 700;
+  font-weight: bold;
   font-style: italic;
 }
 
