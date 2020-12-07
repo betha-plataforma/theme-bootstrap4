@@ -476,15 +476,16 @@ nav.nav {
 // Timeline
 .nav.flex-column.nav-tabs {
   &.nav-timeline {
+    flex-wrap: nowrap;
     border: none;
     li {
       display: flex;
-      .badge {
+      > .badge {
         z-index: 2;
         margin-left: 108px;
         transform: translateX(-50%);
       }
-      > div {
+      > div:first-child {
         min-width: 108px;
         flex: 0;
         text-align: right;

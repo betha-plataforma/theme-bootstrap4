@@ -60,7 +60,7 @@ $root: ".table";
     > tr > th {
       font-size: 12px;
       font-weight: 600;
-
+      border: none;
       > .icon-sort-up {
         vertical-align: bottom;
       }
@@ -71,6 +71,8 @@ $root: ".table";
 
       > a,
       > div > a,
+      > a:not([href]),
+      > a:not([href]):not([class]),
       > i,
       > label,
       > span {

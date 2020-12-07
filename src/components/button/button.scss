@@ -19,9 +19,6 @@ button:focus {
   > .material-icons {
     vertical-align: middle;
   }
-  i {
-    font-size: 14px;
-  }
   &:before {
     font-weight: normal;
   }
@@ -256,6 +253,7 @@ button:focus {
   &.btn-sm {
     font-size: 12px;
     padding: 5px 10px;
+    line-height: 1.475;
   }
   &.btn-circle {
     border-radius: 50%;
@@ -268,11 +266,6 @@ button:focus {
       box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
     }
   }
-}
-
-.btn-group-sm > .btn,
-.btn.btn-sm {
-  line-height: 1.55;
 }
 
 .btn-group {
