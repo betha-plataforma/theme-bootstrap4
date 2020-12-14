@@ -128,20 +128,6 @@ $root: ".table";
         .text-center {
           text-align: center;
         }
-
-        .progress {
-          cursor: default;
-          height: 14px;
-          margin: 0;
-
-          .progress-bar {
-            line-height: 15px;
-
-            span {
-              font-size: 11px;
-            }
-          }
-        }
       }
 
       &.item-warning-undo {
