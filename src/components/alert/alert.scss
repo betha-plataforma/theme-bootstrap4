@@ -46,14 +46,12 @@ $alert-states: (
   'info': $alert-info
 );
 
-
 $root: ".alert";
 $rootIcon: ".alert-icon";
 $rootDismissible: ".alert-dismissible";
 
 #{$root} {
   border-radius: 2px;
-  padding: 12px;
   position: relative;
 
   @each $name, $value in $alert-states {
@@ -75,49 +73,40 @@ $rootDismissible: ".alert-dismissible";
 }
 
 .alert {
-  &#{$rootIcon} {
-    padding: 12px 12px 12px 48px;
-
-    &#{$root} {
-      @each $name, $value in $alert-states {
-        &-#{$name} {
-          &:before {
-            content: map-get($value, "icon-name");
-            display: inline-block;
-            font-family: $base-icon;
-            font-feature-settings: "liga" 1;
-            font-size: 20px;
-            font-style: normal;
-            height: 20px;
-            top: 15px;
-            left: 1.25rem;
-            line-height: 20px;
-            margin-right: 5px;
-            overflow: hidden;
-            position: absolute;
-            text-rendering: optimizeLegibility;
-            text-transform: none;
-            white-space: nowrap;
-            width: 20px;
-          }
-        }
-      }
-    }
-  }
   &#{$rootDismissible} {
     padding-right: 40px;
+  }
+}
 
-    .close {
-      text-shadow: none;
-      padding: 10px 1.25rem 11px;
-    }
+/** Helpers **/
 
-    @each $name, $value in $alert-states {
-      &#{$root}-#{$name} {
-        .close {
-          color: map-get($value, "link-color");
-        }
+.alert {
+  &#{$rootIcon} {
+      padding: .75rem 1.25rem .75rem 3.3rem !important;
+
+      &#{$root} {
+      @each $name, $value in $alert-states {
+          &-#{$name} {
+              &:before {
+                  content: map-get($value, "icon-name");
+                  display: inline-block;
+                  font-family: $base-icon;
+                  text-rendering: optimizeLegibility;
+                  font-feature-settings: "liga" 1;
+                  font-size: 1.25rem;
+                  margin-right: .5rem;
+                  margin-bottom:0;
+                  font-weight: 500;
+                  line-height: 1.2;
+                  position: absolute;
+                  height:100%;
+                  top:0;
+                  left: calc(1rem + 5px);
+                  display: flex;
+                  align-items: center;
+                  }
+              }
+          }
       }
-    }
   }
 }

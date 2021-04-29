@@ -4,20 +4,15 @@ $dropdown-header-color: map-get($colors-gray, "dark-10");
 $dropdown-color: map-get($colors-gray, "dark-20");
 
 .dropdown-menu {
-  border: 1px solid palette("gray", "light-10");
+  border-color: palette("gray", "light-10");
   border-radius: 2px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  padding: 5px 0;
-  font-size: 14px;
   .dropdown-header {
     color: palette("gray", "dark-20");
-    font-size: 14px;
     font-weight: font("primary", "weight", "semi-bold");
-    padding: 6px 14px;
   }
   .divider {
     background-color: palette("gray", "light-10");
-    margin: 10px 14px 0;
   }
   li {
     > a {
@@ -41,33 +36,12 @@ $dropdown-color: map-get($colors-gray, "dark-20");
       }
     }
   }
-  h2 {
-    color: #777;
-    display: block;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.4285;
-    margin: 0;
-    padding: 3px 20px;
-    white-space: nowrap;
-  }
+
   ul.radio-list {
     li {
-      // stylelint-disable-line
-      padding: 4px 20px 4px 30px;
       &:hover {
         background-color: #ededed;
       }
-    }
-  }
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    li {
-      // stylelint-disable-line
-      position: relative;
-      white-space: nowrap;
     }
   }
 }
@@ -78,29 +52,6 @@ $dropdown-color: map-get($colors-gray, "dark-20");
 
 .dropdown-lg {
   width: 650px;
-}
-
-.has-content {
-  padding-left: 8px;
-  padding-right: 8px;
-  > .input-group-search {
-    margin-bottom: 8px;
-    margin-top: 3px;
-  }
-}
-
-.no-result {
-  padding: 6px 14px;
-}
-
-.dropdown-right {
-  left: auto;
-  right: 0;
-}
-
-.dropdown-left {
-  left: 0;
-  right: auto;
 }
 
 .dropdown-menu > .disabled > a {
@@ -134,7 +85,7 @@ $dropdown-color: map-get($colors-gray, "dark-20");
 .btn.btn-secondary.dropdown-toggle,
 .show > .btn-secondary.dropdown-toggle {
   background-color: palette("gray", "light-40");
-  border: 1px solid palette("gray", "base");
+  border-color: palette("gray", "base");
   color: palette("gray", "dark-30");
 
   &:focus {
@@ -146,7 +97,7 @@ $dropdown-color: map-get($colors-gray, "dark-20");
   &:active,
   &.active {
     background-color: palette("gray", "light-10");
-    border: 1px solid palette("gray", "base");
+    border-color: palette("gray", "base");
     color: palette("gray", "dark-30");
   }
 }

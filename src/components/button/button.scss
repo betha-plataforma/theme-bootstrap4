@@ -10,12 +10,12 @@ button:focus {
 }
 
 .btn {
-  border: none;
   border-radius: 2px;
   font-family: $base-font;
-  font-weight: 400;
-  line-height: 1.475;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   > .material-icons {
     vertical-align: middle;
   }
@@ -24,7 +24,7 @@ button:focus {
   }
   &.btn-secondary {
     background-color: palette('gray', 'light-40');
-    border: 1px solid palette('gray', 'base');
+    border-color:  palette('gray', 'base');
     color: palette('gray', 'dark-30');
     &:hover,
     &:focus {
@@ -36,7 +36,7 @@ button:focus {
     &:active,
     &.active {
       background-color: palette('gray', 'light-10');
-      border: 1px solid palette('gray', 'base');
+      border-color:  palette('gray', 'base');
       color: palette('gray', 'dark-30');
     }
     &[disabled],
@@ -44,7 +44,7 @@ button:focus {
       &:hover {
         background-color: palette('gray', 'light-40');
       }
-      border: 1px solid palette('gray', 'light-10');
+      border-color:  palette('gray', 'light-10');
       box-shadow: none;
       color: palette('gray', 'base');
       opacity: 1;
@@ -56,25 +56,25 @@ button:focus {
   }
   &.btn-success {
     background-color: palette('green', 'dark-10');
-    border: 1px solid palette('green', 'dark-10');
+    border-color:  palette('green', 'dark-10');
     color: palette('gray', 'light-40');
     &:hover,
     &:focus {
       background-color: palette('green', 'dark-20');
-      border: 1px solid palette('green', 'dark-20');
+      border-color:  palette('green', 'dark-20');
     }
     &:not(:disabled):not(.disabled).active,
     &:not(:disabled):not(.disabled):active,
     &:active,
     &.active {
       background-color: palette('green', 'dark-30');
-      border: 1px solid palette('green', 'dark-30');
+      border-color:  palette('green', 'dark-30');
       color: palette('gray', 'light-40');
     }
     &[disabled],
     &.disabled {
       background-color: palette('green', 'light-20');
-      border: 1px solid palette('green', 'light-20');
+      border-color:  palette('green', 'light-20');
       box-shadow: none;
       color: palette('gray', 'light-40');
       opacity: 1;
@@ -86,25 +86,25 @@ button:focus {
   }
   &.btn-primary {
     background-color: palette('blue', 'base');
-    border: 1px solid palette('blue', 'base');
+    border-color:  palette('blue', 'base');
     color: palette('gray', 'light-40');
     &:hover,
     &:focus {
       background-color: palette('blue', 'dark-10');
-      border: 1px solid palette('blue', 'dark-10');
+      border-color:  palette('blue', 'dark-10');
     }
     &:not(:disabled):not(.disabled).active,
     &:not(:disabled):not(.disabled):active,
     &:active,
     &.active {
       background-color: palette('blue', 'dark-20');
-      border: 1px solid palette('blue', 'dark-20');
+      border-color:  palette('blue', 'dark-20');
       color: palette('gray', 'light-40');
     }
     &[disabled],
     &.disabled {
       background-color: palette('blue', 'light-20');
-      border: 1px solid palette('blue', 'light-20');
+      border-color:  palette('blue', 'light-20');
       box-shadow: none;
       color: palette('gray', 'light-40');
       opacity: 1;
@@ -116,25 +116,25 @@ button:focus {
   }
   &.btn-danger {
     background-color: palette('red', 'base');
-    border: 1px solid palette('red', 'base');
+    border-color:  palette('red', 'base');
     color: palette('gray', 'light-40');
     &:hover,
     &:focus {
       background-color: palette('red', 'dark-10');
-      border: 1px solid palette('red', 'dark-10');
+      border-color:  palette('red', 'dark-10');
     }
     &:not(:disabled):not(.disabled).active,
     &:not(:disabled):not(.disabled):active,
     &:active,
     &.active {
       background-color: palette('red', 'dark-20');
-      border: 1px solid palette('red', 'dark-20');
+      border-color:  palette('red', 'dark-20');
       color: palette('gray', 'light-40');
     }
     &[disabled],
     &.disabled {
       background-color: palette('red', 'light-20');
-      border: 1px solid palette('red', 'light-20');
+      border-color:  palette('red', 'light-20');
       box-shadow: none;
       color: palette('gray', 'light-40');
       opacity: 1;
@@ -146,25 +146,25 @@ button:focus {
   }
   &.btn-warning {
     background-color: palette('yellow', 'base');
-    border: 1px solid palette('yellow', 'base');
+    border-color:  palette('yellow', 'base');
     color: palette('gray', 'dark-30');
     &:hover,
     &:focus {
       background-color: palette('yellow', 'dark-10');
-      border: 1px solid palette('yellow', 'dark-10');
+      border-color:  palette('yellow', 'dark-10');
     }
     &:not(:disabled):not(.disabled).active,
     &:not(:disabled):not(.disabled):active,
     &:active,
     &.active {
       background-color: palette('yellow', 'dark-20');
-      border: 1px solid palette('yellow', 'dark-20');
+      border-color:  palette('yellow', 'dark-20');
       color: palette('gray', 'dark-30');
     }
     &[disabled],
     &.disabled {
       background-color: palette('yellow', 'light-10');
-      border: 1px solid palette('yellow', 'light-10');
+      border-color:  palette('yellow', 'light-10');
       box-shadow: none;
       color: palette('gray', 'light-40');
       opacity: 1;
@@ -176,25 +176,25 @@ button:focus {
   }
   &.btn-info {
     background-color: palette('aqua', 'light-10');
-    border: 1px solid palette('aqua', 'light-10');
+    border-color:  palette('aqua', 'light-10');
     color: palette('gray', 'dark-30');
     &:hover,
     &:focus {
       background-color: palette('aqua', 'base');
-      border: 1px solid palette('aqua', 'base');
+      border-color:  palette('aqua', 'base');
     }
     &:not(:disabled):not(.disabled).active,
     &:not(:disabled):not(.disabled):active,
     &:active,
     &.active {
       background-color: palette('aqua', 'dark-10');
-      border: 1px solid palette('aqua', 'dark-10');
+      border-color:  palette('aqua', 'dark-10');
       color: palette('gray', 'light-40');
     }
     &[disabled],
     &.disabled {
       background-color: palette('aqua', 'light-20');
-      border: 1px solid palette('aqua', 'light-20');
+      border-color:  palette('aqua', 'light-20');
       box-shadow: none;
       color: palette('gray', 'light-40');
       opacity: 1;
@@ -226,46 +226,6 @@ button:focus {
       opacity: 1;
     }
   }
-  &.btn-add:before {
-    content: '\f0415';
-    display: inline-block;
-    font-family: $base-icon;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    margin-right: 5px;
-    margin-top: -3px;
-    padding-right: 0;
-    vertical-align: middle;
-  }
-  &.btn-lg {
-    &.btn-add:before {
-      font-size: 20px;
-    }
-  }
-  &.btn-xs {
-    font-size: 12px;
-    padding: 1px 5px;
-    &.btn-add:before {
-      font-size: 14px;
-    }
-  }
-  &.btn-sm {
-    font-size: 12px;
-    padding: 5px 10px;
-    line-height: 1.475;
-  }
-  &.btn-circle {
-    border-radius: 50%;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
-    display: block;
-    font-size: 22px;
-    height: 50px;
-    width: 50px;
-    &:hover {
-      box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
-    }
-  }
 }
 
 .btn-group {
@@ -293,3 +253,32 @@ button:focus {
 button.btn-link:disabled {
   pointer-events: all;
 }
+
+/** Botões **/
+
+/** Deletar btn-add no futuro **/
+
+.btn.btn-add:before {
+  content: '\f0415';
+  display: inline-block;
+  font-family: $base-icon;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin-right: 5px;
+  margin-top: -3px;
+  padding-right: 0;
+  vertical-align: middle;
+}
+.btn.btn-lg.btn-add:before {
+  font-size: 20px;
+}
+
+.btn-circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%!important;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+/** .Botões **/

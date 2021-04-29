@@ -1,108 +1,87 @@
-// Global
 @import '../../variables';
 
-.form-check-input,
-.custom-checkbox .custom-control-input[type="checkbox"] {
-  left: -9999px;
-  position: absolute;
-
-  + label,
-  + label.form-check-label {
-    color: map-get($colors-gray, 'dark-30');
+input[type='checkbox']:hover {
     cursor: pointer;
-    font-family: $base-font;
-    font-size: 14px;
-    font-weight: normal;
-    height: 7px;
-    overflow-wrap: normal;
-    padding-left: 16px;
-    position: relative;
-    text-indent: 8px;
-    text-overflow: ellipsis;
-    user-select: none;
-    word-break: normal;
-    vertical-align: top;
+}
 
-    &:before,
-    &:after {
-      border-radius: 2px;
-      height: 15px;
-      left: 0;
-      position: absolute;
-      top: 2px;
-      width: 15px;
-    }
+.form-check-input {
+  margin-top: .2rem;
+}
 
-    &:before {
-      background: $white;
-      border: 2px solid map-get($colors-gray, 'base');
-      content: '';
-    }
+.form-check-label {
+  padding-left: 0.25rem;
+}
 
-    &:after {
-      align-items: center;
-      background: no-repeat -100% -100%;
-      background-color: $blue;
-      color: $white;
-      content: '\f012c';
-      display: flex;
-      font-family: $base-icon;
-      font-size: 15px;
-      font-weight: 300;
-      justify-content: flex-end;
-      line-height: .8;
-    }
-  }
+.form-check-label > .form-check-input {
+  margin-left: -0.15rem !important;
+}
 
-  &:not(:checked) + label:after {
-    opacity: 0;
-  }
+.form-check-inline {
+    display: inline-block;
+    margin-right: 1rem;
+}
 
-  &:checked + label:after {
-    opacity: 1;
-  }
+.form-check-inline .form-check-input {
+  display: inline-block !important;
+}
 
-  &:disabled + label {
-    color: map-get($colors-gray, 'base');
-    &:before {
-      background-color: map-get($colors-gray, 'light-30');
-      border-color: map-get($colors-gray, 'light-10');
-      box-shadow: none;
-    }
-  }
-  &:disabled:checked + label {
-    &:after {
-      opacity: .65;
-    }
-  }
+.form-check-inline .form-check-input {
+  /* position: static; */
+  margin-top: 0;
+  margin-right: .3125rem;
+  margin-left: 0;
+}
 
-  &.checkbox-success + label:after {
+input[type='checkbox']:after {
+  width: 1.1rem !important;
+  height: 1.1rem !important;
+  border-radius: .15rem !important;
+  top: 0px;
+  left: -2px;
+  position: relative;
+  background-color: $white;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid map-get($colors-gray, 'base');
+}
+
+input[type='checkbox']:checked:after {
+  width: 1.1rem !important;
+  height: 1.1rem !important;
+  border-radius: .15rem !important;
+  top: 0;
+  left: -2;
+  position: relative;
+  content: '';
+  background-size: 1rem;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpolygon fill='%23fff' points='19.59,4.88 9,15.46 4.91,11.38 2.79,13.5 9,19.71 21.71,7 '/%3e%3c/svg%3e");
+  background-color: $blue;
+  border-color: $blue !important;
+  display: inline-block;
+  visibility: visible;
+  border: 1px solid map-get($colors-gray, 'base');
+}
+
+input[type='checkbox'].checkbox-success:checked {
+  &:after {
     background-color: $green;
-  }
-
-  &.checkbox-danger + label:after {
-    background-color: $red;
-  }
-
-  &.checkbox-warning + label:after {
-    background-color: $yellow;
-  }
-
-  &:focus + label:before {
-    outline: 5px auto focus-ring-color;
-  }
-
-  &:indeterminate + label:after {
-    border-bottom: 3px solid map-get($colors-gray, 'base');
-    content: '';
-    display: block;
-    height: 1px;
-    left: 5px;
-    top: 8px;
-    width: 7px;
+    border-color: $green !important;
   }
 }
 
-.custom-control-input:focus ~ .custom-control-label::before {
-    box-shadow: none;
+input[type='checkbox'].checkbox-danger:checked {
+  &:after {
+    background-color: $red;
+    border-color: $red !important;
+  }
+}
+
+input[type='checkbox'].checkbox-warning:checked {
+  &:after {
+    background-color: $yellow;
+    border-color: $yellow !important;
+  }
 }

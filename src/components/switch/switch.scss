@@ -1,11 +1,10 @@
 // Global
 @import "../../variables";
 .custom-switch {
-  padding-left: 1.5rem;
+  margin-left: -30px;
   .custom-control-label {
     padding-left: 36px;
-    font-size: 14px;
-    font-weight: normal;
+    font-weight: normal !important;
     color: map-get($colors-gray, 'dark-30');
     cursor: pointer;
     &:before,
@@ -67,6 +66,7 @@
     &:disabled~.custom-control-label,
     &[disabled]~.custom-control-label {
       color: map-get($colors-gray, "base");
+      cursor: not-allowed !important;
 
       &:before {
         background-color: map-get($colors-gray, "light-20");

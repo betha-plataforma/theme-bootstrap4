@@ -19,10 +19,6 @@ Lista de alguns comandos úteis
   - `yarn build:compressed` Versão para ambiente de produção
   - `yarn build:expanded` Versão para ambiente de dev/tests
 
-## Testando no Showcase
-
-No diretório [**showcase**](./showcase) temos aplicações que possibilitam testar de forma interativa
-
 ## Referências
 
 - [Sass - Documentation](https://sass-lang.com/documentation)

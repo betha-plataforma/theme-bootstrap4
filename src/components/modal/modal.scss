@@ -1,53 +1,5 @@
 @import "../../config";
 
-.page-overflow {
-  overflow: hidden;
-}
-
-.modal-header.has-nav-tabs {
-  &:before,
-  &:after {
-    display: none;
-  }
-  .nav-tabs {
-    margin-bottom: -11px;
-    width: 100%;
-  }
-}
-
-/* Modal auto hight */
-.modal-dialog.modal-auto-height {
-  .modal-content {
-    display: flex;
-    flex-direction: column;
-    max-height: calc(100vh - 60px);
-
-    .modal-body {
-      display: flex;
-      flex-direction: column;
-      overflow-y: auto;
-    }
-
-    .modal-auto-height__scroll {
-      overflow-y: auto;
-    }
-  }
-}
-
-@media (max-width: 425px) {
-  .modal-dialog.modal-auto-height {
-    margin: 0;
-
-    .modal-content {
-      max-height: 100vh;
-
-      .modal-body {
-        height: 100vh;
-      }
-    }
-  }
-}
-
 /* tamanhos de modal */
 
 .modal .modal-xxl {
@@ -66,57 +18,11 @@
   width: 300px;
 }
 
-/* ajuste visual modal */
-
-.modal-content {
-  border-radius: 3px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.modal-title {
-  font-size: 19px;
-  line-height: 1.42857143;
-}
-
-.modal-header,
-.modal-footer,
-.modal-body {
-  padding: 10px 15px;
-}
-
 .modal-header,
 .modal-footer {
   border-color: palette("gray", "light-30");
 }
 
-.modal-alert .modal-body {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-  text-align: justify;
-  word-wrap: break-word;
-}
-
-/* ícones de ação no modal-header */
-
-.modal-header__actions + .modal-title {
-  display: inline-block;
-}
-
-.modal-header__actions {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  float: right;
-  list-style: none;
-  margin-bottom: 0;
-  margin-right: 10px;
-  margin-top: 2px;
-  > li,
-  > span {
-    margin-left: 5px;
-  }
-}
 
 /* ajuste do tamanho da modal xxl para monitores menores */
 
@@ -124,80 +30,6 @@
   .modal {
     .modal-xxl {
       width: 1020px;
-      .modal-header,
-      .modal-footer,
-      .modal-body {
-        padding: 10px;
-      }
     }
   }
 }
-
-.modal-footer .btn-group + .btn,
-.modal-footer .btn + .dropdown,
-.modal-footer .btn + .btn-group {
-  margin-left: 5px;
-}
-
-.modal-dialog {
-  .col-fix-user {
-    width: 5.333333333333332%;
-  }
-  .col-fix-acoes {
-    width: 11.333333333333332%;
-  }
-}
-
-.modal {
-  .modal-content {
-    border: none;
-    border-radius: 2px;
-    .modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0 15px;
-      padding: 10px 0;
-      .close {
-        color: palette("gray");
-        font-size: 30px;
-        font-weight: 300;
-        line-height: 15px;
-        margin: auto;
-        padding: 6px;
-        flex: 0;
-        opacity: 1;
-        &:hover {
-          color: palette("black");
-          opacity: 0.5;
-        }
-      }
-      .modal-title {
-        font-size: 18px;
-        flex: 1;
-      }
-    }
-    .modal-footer {
-      margin: 0 15px;
-      padding: 10px 0;
-    }
-    .modal-body {
-      padding: 10px 15px;
-      .modal-footer {
-        margin: 0;
-        padding: 10px 0 0;
-      }
-    }
-  }
-}
-
-// .modal-content{
-//   animation-name: example;
-//   animation-duration: 0.3s;
-// }
-
-// @keyframes example {
-//   0%   {transform: scale(0.5)}
-//   75%  {transform: scale(1.1)}
-//   100% {transform: scale(1)}
-// }

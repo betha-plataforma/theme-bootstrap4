@@ -11,14 +11,7 @@ $input-addon-hover: map-get($colors-gray, "light-20");
   border-radius: 2px;
   box-shadow: none;
   color: palette("gray", "dark-30");
-  font-size: 13px;
   transition: none;
-  &.input-sm {
-    font-size: 12px;
-  }
-  &.input-lg {
-    font-size: 18px;
-  }
   &::placeholder {
     color: palette("gray", "dark-10");
   }
@@ -43,6 +36,11 @@ $input-addon-hover: map-get($colors-gray, "light-20");
   }
 }
 
+input:disabled, .form-check-input:disabled~.form-check-label, .form-check-input[disabled]~.form-check-label {
+  color: #c0c0c0;
+  cursor: not-allowed !important;
+}
+
 form {
   input {
     .field-error,
@@ -53,15 +51,15 @@ form {
   }
 }
 
-label,
-form label {
+label {
   &:not(.custom-control-label),
   &:not(.form-check-label) {
     color: palette("gray", "dark-20");
-    font-size: 12px;
-    font-weight: 600;
-    margin-bottom: 2px;
   }
+}
+
+label:not(label.form-check-label) {
+  font-weight: 600 !important;
 }
 
 .required-icon {
@@ -80,10 +78,6 @@ input[disabled] {
   + .input-group-addon {
     border-right: 1px solid palette("gray");
   }
-}
-
-.input-group-text {
-  padding: 0 0.75rem;
 }
 
 .input-group-addon {

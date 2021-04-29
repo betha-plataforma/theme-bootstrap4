@@ -5,12 +5,9 @@
     > .page-item {
       margin-left: 4px;
       .page-link {
-        padding: 5px 10px;
-        font-size: 12px;
-        line-height: 1.5;
         border-radius: 2px;
         background-color: #fff;
-        border: 1px solid silver;
+        border-color: silver;
         color: #222;
 
         &:focus {
@@ -34,7 +31,7 @@
       &.disabled {
         .page-link {
           pointer-events: none;
-          border: 1px solid palette('gray', 'light-10');
+          border-color: palette('gray', 'light-10');
           box-shadow: none;
           color: palette('gray', 'base');
           opacity: 1;

@@ -1,13 +1,12 @@
 // Global
 @import "../../variables";
 .breadcrumb {
-  background: 0 0;
+  background: transparent;
   margin: 0;
   padding: 0;
   align-items: flex-end;
   .breadcrumb-item {
     color: palette("gray", "dark-10");
-    font-size: 12px;
     &.active {
       color: palette("gray", "dark-30");
     }

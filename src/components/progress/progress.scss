@@ -61,7 +61,7 @@ $progress-default: $progress-primary;
 
   &__percent {
     color: map-get($colors-gray, "dark-30");
-    font-size: 12px;
+    // font-size: 12px;
     font-weight: 600;
     text-align: center;
     width: 100%;
@@ -69,7 +69,7 @@ $progress-default: $progress-primary;
   &__description {
     color: map-get($colors-gray, "dark-30");
     display: flex;
-    font-size: 12px;
+    // font-size: 12px;
     font-weight: 500;
     justify-content: space-between;
     line-height: 12px;

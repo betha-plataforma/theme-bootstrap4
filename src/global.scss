@@ -18,12 +18,13 @@ $background-color: palette("gray", "light-20");
 html,
 body {
     background: $background-color;
+    //font-size: 13px; 0.915rem;
+    font-size: 0.915rem;
 }
 
 body {
     color: palette("gray", "dark-30");
     font-family: $base-font;
-    font-size: 14px;
 }
 
 a,
