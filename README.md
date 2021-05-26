@@ -1,6 +1,6 @@
 # @betha-plataforma/theme-bootstrap4
 
-Tema do [Design System Betha](https://design.plataforma.betha.cloud/) para [Bootstrap 4](https://getbootstrap.com/docs/4.5/)
+Tema do [Design System Betha](https://docs.plataforma.betha.cloud/) para [Bootstrap 4](https://getbootstrap.com/docs/4.5/)
 
 ## Instalando
 
