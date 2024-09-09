@@ -50,7 +50,7 @@ button:focus {
       opacity: 1;
     }
     &.dropdown-toggle {
-      border-left: 1px solid $gray;
+      border-left: 1px solid palette('gray', 'base');;
       z-index: 2;
     }
   }

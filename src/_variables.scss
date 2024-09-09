@@ -27,32 +27,26 @@ $font: (
    ),
 );
 // Colors
-$base-color: #f5f5f7;
 $white: #fff;
 $black: #000;
+
 // Colors >> Gray
-$gray-dark-40: $black;
-$gray-dark-30: #222;
-$gray-dark-20: #595959;
-$gray-dark-10: #767676;
-$gray: #c0c0c0;
-$gray-light-10: #e1e3e6;
-$gray-light-20: #ebedf0;
-$gray-light-30: #f5f7fa;
-$gray-light-40: $white;
+$gray: #bfbfc0;
 $colors-gray: (
-   "dark-40": $gray-dark-40,
-   "dark-30": $gray-dark-30,
-   "dark-20": $gray-dark-20,
-   "dark-10": $gray-dark-10,
+   "dark-40": $black,
+   "dark-30": dark($gray, 61%),
+   "dark-20": dark($gray, 40%),
+   "dark-10": dark($gray, 29%),
+   "dark-5": dark($gray, 15%),
    "base": $gray,
-   "light-10": $gray-light-10,
-   "light-20": $gray-light-20,
-   "light-30": $gray-light-30,
-   "light-40": $gray-light-40,
+   "light-5": lighten($gray, 9%),
+   "light-10": lighten($gray, 14%),
+   "light-20": lighten($gray, 18%),
+   "light-30": lighten($gray, 21%),
+   "light-40": $white,
 );
 // Colors >> Red
-$red: #d64038;
+$red: #dd413c;
 $colors-red: (
    "dark-40": dark($red, 40%),
    "dark-30": dark($red, 30%),
@@ -65,7 +59,7 @@ $colors-red: (
    "light-40": light($red, 40%),
 );
 // Colors >> Pink
-$pink: #cb528e;
+$pink: #cb528f;
 $colors-pink: (
    "dark-40": dark($pink, 40%),
    "dark-30": dark($pink, 30%),
@@ -78,7 +72,7 @@ $colors-pink: (
    "light-40": light($pink, 40%),
 );
 // Colors >> Blue
-$blue: #3475c1;
+$blue: #3374db;
 $colors-blue: (
    "dark-40": dark($blue, 40%),
    "dark-30": dark($blue, 30%),
@@ -91,7 +85,7 @@ $colors-blue: (
    "light-40": light($blue, 40%),
 );
 // Colors >> Aqua
-$aqua: #48b1d3;
+$aqua: #46afd2;
 $colors-aqua: (
    "dark-40": dark($aqua, 40%),
    "dark-30": dark($aqua, 30%),
@@ -104,7 +98,7 @@ $colors-aqua: (
    "light-40": light($aqua, 40%),
 );
 // Colors >> Green
-$green: #54a668;
+$green: #3ec18f;
 $colors-green: (
    "dark-40": dark($green, 40%),
    "dark-30": dark($green, 30%),
@@ -117,7 +111,7 @@ $colors-green: (
    "light-40": light($green, 40%),
 );
 // Colors >> Yellow
-$yellow: #efbc3c;
+$yellow: #e8b730;
 $colors-yellow: (
    "dark-40": dark($yellow, 40%),
    "dark-30": dark($yellow, 30%),
@@ -130,7 +124,7 @@ $colors-yellow: (
    "light-40": light($yellow, 40%),
 );
 // Colors >> Orange
-$orange: #ea863e;
+$orange: #e87d30;
 $colors-orange: (
    "dark-40": dark($orange, 40%),
    "dark-30": dark($orange, 30%),
@@ -143,7 +137,7 @@ $colors-orange: (
    "light-40": light($orange, 40%),
 );
 // Colors >> Purple
-$purple: #a46ab5;
+$purple: #9f62b2;
 $colors-purple: (
    "dark-40": dark($purple, 40%),
    "dark-30": dark($purple, 30%),
@@ -174,33 +168,19 @@ $colors: (
    ),
 );
 
-/**
- ** Cores dos produtos extraidos do manual da marca
+$main-brand-color: #0761ff;
 
-    Gestão municipal              -> Marrom   / Brown    -> #9A8B7D
-    Planejamento e Contabilidade  -> Lilás    / Lilac    -> #8986CA
-    Arrecadação e Fiscalização    -> Verde    / Lime     -> #26D07C
-    Atendimento                   -> Cinza    / Gray     -> #AFB2B2
-    Gestão de Compras e Contratos -> Vermelho / Red      -> #DF4661
-    Pessoal e Recursos Humanos    -> Azul     / Blue     -> #009CDE
-    Saúde e Assistência Social    -> Verde    / Green    -> #A2C084
-    Educação e Gestão Escolar     -> Amarelo  / Yellow   -> #F7B51C
-    Gestão e Leis Municipais      -> Laranja  / Orange   -> #F7932F
-
- ** PS.: As Cores estão em português para coincidirem com o manual.
- **/
-
-$main-brand-color: #001489;
 $brand-colors: (
-   "brown": #9a8b7d,
-   "lilac": #8986ca,
-   "lime": #26d07c,
-   "gray": #afb2b2,
-   "red": #df4661,
-   "blue": #009cde,
-   "green": #a2c084,
-   "yellow": #f7b51c,
-   "orange": #f7932f,
+   'brown'    : #9a8b7d, // Gestão municipal
+   'lilac'    : #a6b8ff, // Contábil
+   'lime'     : #00bb77, // Arrecadação
+   'gray'     : #959798, // Atendimento
+   'red'      : #ff7a75, // Contratos
+   'blue'     : #009adc, // Pessoal
+   'navy'     : #263e81, // NoPaper
+   'green'    : #a7c27e, // Saúde
+   'yellow'   : #f3b02e, // Educação
+   'orange'   : #f4812e, // Leis
 );
 
 /**
@@ -208,8 +188,8 @@ $brand-colors: (
  **/
 
 $additional-colors: (
-   "blue": #06a,
-   "petrol": #23313f,
+   "blue": #009adc,
+   "petrol": #1c1a23,
    "gold": #ad8b43,
 );
 $breadcrumb-text: map-get($colors-gray, "dark-10");
