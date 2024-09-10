@@ -65,3 +65,5 @@ Os componentes suportados, com base na especificação do Design System, são:
 * Radio
 * Switch
 * Tag
+
+  Test PR
