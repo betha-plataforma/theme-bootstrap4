@@ -1,6 +1,8 @@
 @import "./components/fonts/fonts";
 @import "config";
+
 $background-color: palette("gray", "light-20");
+
 @media (max-width: 767px) {
     html,
     body {
@@ -18,7 +20,6 @@ $background-color: palette("gray", "light-20");
 html,
 body {
     background: $background-color;
-    //font-size: 13px; 0.915rem;
     font-size: 0.915rem;
 }
 

@@ -51,7 +51,7 @@ $rootIcon: ".alert-icon";
 $rootDismissible: ".alert-dismissible";
 
 #{$root} {
-  border-radius: 2px;
+  border-radius: $border-radius-sm;
   position: relative;
 
   @each $name, $value in $alert-states {

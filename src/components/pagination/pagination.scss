@@ -5,7 +5,7 @@
     > .page-item {
       margin-left: 4px;
       .page-link {
-        border-radius: 2px;
+        border-radius: $border-radius-sm;
         background-color: #fff;
         border-color: silver;
         color: #222;
@@ -44,7 +44,7 @@
       &:first-child {
         margin-left: 0;
         .page-link {
-          border-radius: 2px;
+          border-radius: $border-radius-sm;
         }
       }
   
