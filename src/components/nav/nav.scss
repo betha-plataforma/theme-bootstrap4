@@ -177,7 +177,7 @@ nav.nav {
       margin-bottom: -1px;
       .nav-link {
         border-bottom: 1px solid palette("gray", "light-10");
-        border-radius: 2px 2px 0 0;
+        border-radius: $border-radius-sm $border-radius-sm 0 0;
         &.active {
           border-bottom: 0;
           border-left: 1px solid palette("gray", "light-10");
@@ -446,22 +446,22 @@ nav.nav {
       &.active {
         font-weight: normal;
         &::after {
-          background-color: #3475c1;
-          border-color: #3475c1;
+          background-color: palette("blue", "base");
+          border-color: palette("blue", "base");
           color: #fff;
         }
       }
 
       &.checked:not(.active) {
-        color: #3475c1;
+        color: palette("blue", "base");
         &::after {
           content: "\F012C";
           font-family: "Material Design Icons";
-          border-color: #3475c1;
-          color: #3475c1;
+          border-color: palette("blue", "base");
+          color: palette("blue", "base");
         }
         &::before {
-          border-color: #3475c1;
+          border-color: palette("blue", "base");
         }
       }
     }

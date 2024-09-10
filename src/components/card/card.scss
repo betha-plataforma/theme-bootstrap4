@@ -2,6 +2,10 @@
 @import '../../config';
 
 .card {
+
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+
   &.bg-secondary {
     background-color: palette('gray', 'light-30') !important;
   }

@@ -23,6 +23,10 @@
   border-color: palette("gray", "light-30");
 }
 
+.modal-content {
+  border-radius: $border-radius-lg;
+}
+
 
 /* ajuste do tamanho da modal xxl para monitores menores */
 

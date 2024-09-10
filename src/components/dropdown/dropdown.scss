@@ -5,7 +5,7 @@ $dropdown-color: map-get($colors-gray, "dark-20");
 
 .dropdown-menu {
   border-color: palette("gray", "light-10");
-  border-radius: 2px;
+  border-radius: $border-radius-sm;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   .dropdown-header {
     color: palette("gray", "dark-20");

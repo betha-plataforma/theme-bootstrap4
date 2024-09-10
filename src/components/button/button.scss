@@ -10,12 +10,12 @@ button:focus {
 }
 
 .btn {
-  border-radius: 2px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   font-family: $base-font;
   text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: $border-radius-sm;
   > .material-icons {
     vertical-align: middle;
   }
@@ -266,7 +266,7 @@ button.btn-link:disabled {
   font-style: normal;
   font-weight: 400;
   margin-right: 5px;
-  margin-top: -3px;
+  margin-top: -1px;
   padding-right: 0;
   vertical-align: middle;
 }
