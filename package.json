@@ -1,6 +1,6 @@
 {
   "name": "@betha-plataforma/theme-bootstrap4",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Tema do Design System Betha para Bootstrap 4",
   "main": "dist/theme-bootstrap4.css",
   "unpkg": "dist/theme-bootstrap4.min.css",
