@@ -549,7 +549,9 @@
                 </div>
 
                 <div class="my-5">
-                    <button type="button" class="btn btn-primary m-1">Primary</button>
+                    <button type="button" class="btn btn-primary m-1">
+                        Primary
+                    </button>
                     <button type="button" class="btn btn-secondary m-1">Secondary</button>
                     <button type="button" class="btn btn-success m-1">Success</button>
                     <button type="button" class="btn btn-danger m-1">Danger</button>
@@ -569,13 +571,13 @@
                 </div>
 
                 <div class="my-5">
-                    <button type="button" class="btn btn-primary m-1"><i class="mdi mdi-plus h5 mb-0 mr-1"></i>Primary</button>
-                    <button type="button" class="btn btn-secondary m-1"><i class="mdi mdi-plus h5 mb-0 mr-1"></i>Secondary</button>
-                    <button type="button" class="btn btn-success m-1"><i class="mdi mdi-plus h5 mb-0 mr-1"></i>Success</button>
-                    <button type="button" class="btn btn-danger m-1"><i class="mdi mdi-plus h5 mb-0 mr-1"></i>Danger</button>
-                    <button type="button" class="btn btn-warning m-1"><i class="mdi mdi-plus h5 mb-0 mr-1"></i>Warning</button>
-                    <button type="button" class="btn btn-info m-1"><i class="mdi mdi-plus h5 mb-0 mr-1"></i>Info</button>
-                    <button type="button" class="btn btn-link m-1"><i class="mdi mdi-plus h5 mb-0 mr-1"></i>Link</button>
+                    <button type="button" class="btn btn-primary m-1"><i class="mdi mdi-plus mb-0 mr-1"></i>Primary</button>
+                    <button type="button" class="btn btn-secondary m-1"><i class="mdi mdi-plus mb-0 mr-1"></i>Secondary</button>
+                    <button type="button" class="btn btn-success m-1"><i class="mdi mdi-plus mb-0 mr-1"></i>Success</button>
+                    <button type="button" class="btn btn-danger m-1"><i class="mdi mdi-plus mb-0 mr-1"></i>Danger</button>
+                    <button type="button" class="btn btn-warning m-1"><i class="mdi mdi-plus mb-0 mr-1"></i>Warning</button>
+                    <button type="button" class="btn btn-info m-1"><i class="mdi mdi-plus mb-0 mr-1"></i>Info</button>
+                    <button type="button" class="btn btn-link m-1"><i class="mdi mdi-plus mb-0 mr-1"></i>Link</button>
                 </div>
 
                 <div class="my-5">
@@ -595,11 +597,12 @@
                 </div>
 
                 <div class="my-5">
+                    <button class="btn btn-primary btn-add" aria-label="Adicionar documento"> Documento</button>
+                    
                     <button type="button" class="btn btn-success btn-circle m-1">
                         <i class="mdi mdi-plus h4 mb-0"></i>
                     </button>
 
-                    <button class="btn btn-primary btn-add" aria-label="Adicionar documento"> Documento</button>
                 </div>
             </section>
 
@@ -758,7 +761,16 @@
                                     bulk
                                     of the card's content.</p>
                                 <a href="#" class="card-link">Card link</a>
-                                <a href="#" class="card-link">Another link</a>
+                                <div class="dropdown d-inline-block mx-3">
+                                    <a class="card-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                        Dropdown link <i class="mdi mdi-menu-down mb-0 mr-1"></i>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -789,6 +801,63 @@
                                     <a href="#" class="card-link">Card link</a>
                                     <a href="#" class="card-link">Another link</a>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5 align-items-center">
+                    <div class="col-12 col-lg-4 mb-2">
+                        <div class="card">
+                            <div class="card-header">
+                                Header
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="card-link">Card link</a>
+                                <div class="dropdown d-inline-block mx-3">
+                                    <a class="card-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                        Dropdown link <i class="mdi mdi-menu-down mb-0 mr-1"></i>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                Footer
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 mb-2">
+                        <div class="card border-0 bg-secondary">
+                            <img class="card-img-top" src="https://peakvisor.com/img/news/french-mountains.jpg" alt="img">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 mb-2">
+                        <div class="card bg-dark text-white">
+                            <img class="card-img" style="opacity: .4;" src="https://picsum.photos/id/237/200" alt="img">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">Card Image overlays</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up</p>
+                                <p class="card-text">Some quick example text to build on the card title and make up</p>
+                                <p class="card-text">Some quick example text to build on the card title and make up</p>
                             </div>
                         </div>
                     </div>
