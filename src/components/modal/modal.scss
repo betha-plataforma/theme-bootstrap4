@@ -25,6 +25,10 @@
 
 .modal-content {
   border-radius: $border-radius-lg;
+
+  .spinner-grow-backdrop {
+    border-radius: $border-radius-lg;
+  }
 }
 
 
